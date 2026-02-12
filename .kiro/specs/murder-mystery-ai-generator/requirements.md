@@ -110,7 +110,7 @@
 1. THE Skill SHALL 包含以下类别的预定义模板：角色设计、线索设计、时间线构建、动机设计、诡计设计、还原逻辑、推理链条
 2. WHEN Generator请求特定类别的Skill时，THE Skill SHALL 返回该类别下所有可用的模板列表
 3. WHEN 用户选择游戏类型为"本格"时，THE Skill SHALL 优先提供本格推理类Skill模板（如密室诡计、不在场证明、物证链条、公平线索布局、逻辑推理链）
-4. WHEN 用户选择游戏类型为"新本格"时，THE Skill SHALL 优先提供新本格类Skill模板（如叙述性诡计、时间线诡计、身份诡计、多重反转、现代元素融合）
+4. WHEN 用户选择游戏类型为"新本格"时，THE Skill SHALL 优先提供新本格类Skill模板（如特殊设定构建、设定内公平推理、超能力边界设计、叙述性诡计、时间线诡计、身份诡计、设定规则利用型诡计、多重反转）
 5. WHEN 用户选择游戏类型为"变格"时，THE Skill SHALL 优先提供变格类Skill模板（如心理悬疑、氛围营造、角色内心独白、道德困境、开放式结局）
 6. THE Skill SHALL 支持以JSON格式存储和读取Skill模板数据
 7. WHEN 读取Skill模板JSON数据后再序列化回JSON时，THE Skill SHALL 产生与原始数据等价的结果（往返一致性）
