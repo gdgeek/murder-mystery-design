@@ -69,14 +69,20 @@ cd murder-mystery-material
 # 2. 添加设计知识库 submodule
 git submodule add git@github.com:gdgeek/murder-mystery-design.git design-kb
 
-# 3. 安装依赖
+# 3. 配置 GitHub Packages 认证（安装 @gdgeek/murder-mystery-shared 需要）
+#    在项目根目录创建 .npmrc：
+echo '@gdgeek:registry=https://npm.pkg.github.com' >> .npmrc
+echo '//npm.pkg.github.com/:_authToken=你的GITHUB_TOKEN' >> .npmrc
+#    Token 生成：GitHub → Settings → Developer settings → Personal access tokens → 勾选 read:packages
+
+# 4. 安装依赖
 npm install
 
-# 4. 配置环境变量
+# 5. 配置环境变量
 cp .env.example .env
 # 编辑 .env 填入数据库和 AI 服务配置
 
-# 5. 启动开发
+# 6. 启动开发
 npm run dev
 ```
 

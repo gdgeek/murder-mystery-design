@@ -111,8 +111,159 @@ interface Script {
   playerHandbooks: PlayerHandbook[];
   materials: Material[];
   branchStructure: BranchStructure;
+  playableStructure?: PlayableStructure;  // 可选：按幕组织的可游玩结构
 }
 ```
+
+> **PlayableStructure（可游玩结构）**：剧本生成系统新增的可选输出，将剧本内容按"幕"重组为线性可游玩序列：序幕（Prologue）→ 多个中间幕（Act[]）→ 终幕（Finale）。每幕包含故事叙述、搜证目标、交流建议和投票/决策。DM手册和玩家手册各自按幕组织。详见下方"可游玩结构类型定义"。
+
+#### 1.1 可游玩结构类型定义（PlayableStructure）
+
+可游玩结构将剧本内容按"幕"重组为线性可游玩序列，包含双视角（DM + 玩家）的幕结构。中间幕数量等于 `config.roundStructure.totalRounds`。
+
+```typescript
+// ─── 可游玩结构顶层 ───
+interface PlayableStructure {
+  prologue: Prologue;                          // 序幕
+  acts: Act[];                                 // 中间幕（数量 = totalRounds）
+  finale: Finale;                              // 终幕
+  dmHandbook: PlayableDMHandbook;              // DM可游玩手册
+  playerHandbooks: PlayablePlayerHandbook[];   // 玩家可游玩手册
+}
+
+// ─── 序幕 ───
+interface Prologue {
+  backgroundNarrative: string;   // 故事背景叙述
+  worldSetting: string;          // 世界观描述
+  characterIntros: CharacterIntro[];
+}
+
+interface CharacterIntro {
+  characterId: string;
+  characterName: string;
+  publicDescription: string;     // 公开的角色简介
+}
+
+// ─── 幕（Act）───
+interface Act {
+  actIndex: number;              // 从1开始
+  title: string;
+  narrative: string;             // 全局故事叙述（DM朗读）
+  objectives: string[];          // 搜证目标
+  clueIds: string[];             // 本幕分发的线索ID
+  discussion: ActDiscussion;     // 交流建议
+  vote: ActVote;                 // 投票/决策
+}
+
+interface ActDiscussion {
+  topics: string[];              // 讨论话题列表
+  guidingQuestions: string[];    // 引导问题
+  suggestedMinutes: number;      // 建议讨论时长
+}
+
+interface ActVote {
+  question: string;              // 投票问题
+  options: ActVoteOption[];      // 选项列表
+}
+
+interface ActVoteOption {
+  id: string;
+  text: string;                  // 选项文本
+  impact: string;                // 对后续剧情的影响描述
+  nextNodeId?: string;           // 关联分支节点（可选）
+}
+
+// ─── 终幕 ───
+interface Finale {
+  finalVote: ActVote;            // 最终投票（如凶手指认）
+  truthReveal: string;           // 真相揭示文本
+  endings: FinaleEnding[];
+}
+
+interface FinaleEnding {
+  endingId: string;
+  name: string;
+  triggerCondition: string;
+  narrative: string;
+  playerEndingSummaries: { characterId: string; ending: string }[];
+}
+
+// ─── DM可游玩手册 ───
+interface PlayableDMHandbook {
+  prologueGuide: PrologueGuide;
+  actGuides: ActGuide[];
+  finaleGuide: FinaleGuide;
+}
+
+interface PrologueGuide {
+  openingScript: string;         // 开场白文本
+  characterAssignmentNotes: string;
+  rulesIntroduction: string;
+}
+
+interface ActGuide {
+  actIndex: number;
+  readAloudText: string;         // DM朗读文本
+  keyEventHints: string[];       // 关键事件提示
+  clueDistributionInstructions: PlayableClueDistributionInstruction[];
+  discussionGuidance: string;    // 交流环节引导
+  voteHostingNotes: string;      // 投票主持说明
+  dmPrivateNotes: string;        // DM私密备注
+}
+
+interface PlayableClueDistributionInstruction {
+  clueId: string;
+  targetCharacterId: string;
+  condition: string;             // 分发条件
+}
+
+interface FinaleGuide {
+  finalVoteHostingFlow: string;
+  truthRevealScript: string;     // 真相揭示朗读文本
+  endingJudgmentNotes: string;   // 结局判定说明
+}
+
+// ─── 玩家可游玩手册 ───
+interface PlayablePlayerHandbook {
+  characterId: string;
+  characterName: string;
+  prologueContent: PlayerPrologueContent;
+  actContents: PlayerActContent[];
+  finaleContent: PlayerFinaleContent;
+}
+
+interface PlayerPrologueContent {
+  characterId: string;
+  backgroundStory: string;
+  relationships: CharacterRelationship[];
+  initialKnowledge: string[];    // 初始已知信息
+}
+
+interface PlayerActContent {
+  actIndex: number;
+  characterId: string;
+  personalNarrative: string;     // 角色视角故事片段
+  objectives: string[];          // 本幕行动目标
+  clueHints: string[];           // 线索提示
+  discussionSuggestions: string[];
+  secretInfo: string;            // 本幕私密信息
+}
+
+interface PlayerFinaleContent {
+  characterId: string;
+  closingStatementGuide: string; // 最终陈述指引
+  votingSuggestion: string;      // 投票建议
+}
+```
+
+**迁移支持**：提供 `MigrationService` 将旧版 Script（无 playableStructure）转换为新结构，映射规则：
+- `dmHandbook.overview` → `prologue.backgroundNarrative`
+- `dmHandbook.roundGuides[i]` → `actGuides[i]`
+- `dmHandbook.branchDecisionPoints` → 按 `roundIndex` 映射到 `acts[i].vote`
+- `dmHandbook.clueDistribution` → 按 `roundIndex` 分组到 `acts[i].clueIds`
+- `playerHandbook.roundActions[i]` → `playerActContents[i]`
+- `dmHandbook.truthReveal` → `finale.truthReveal`
+- `dmHandbook.endings` → `finale.endings`
 
 ### 2. 物料生成系统
 

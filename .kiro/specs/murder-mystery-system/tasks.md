@@ -14,7 +14,7 @@
     - 创建 src/db/mysql.ts（MySQL 连接池）
     - 创建 src/db/migrations/ 目录和 SQL 迁移文件（material_jobs、sub_tasks 表）
     - 创建 storage/ 目录
-    - _Requirements: 16.1, 18.3_
+    - _Requirements: 16.1, 19.3_
 
   - [ ] 1.2 实现 Script_JSON 校验器
     - 创建 src/validators/script-json.validator.ts
@@ -61,7 +61,7 @@
     - 创建 src/adapters/image-ai.adapter.ts（AI 生图接口 + 实现）
     - 创建 src/adapters/video-ai.adapter.ts（AI 生视频接口 + 实现）
     - 通过环境变量配置 API 密钥和端点
-    - _Requirements: 18.4_
+    - _Requirements: 19.4_
 
   - [ ] 3.2 实现 AssetStorage
     - 创建 src/services/asset-storage.ts
@@ -131,7 +131,7 @@
     - _Requirements: 16.1_
 
   - [ ] 4.3 创建 Dockerfile（多阶段构建）
-    - _Requirements: 18.3_
+    - _Requirements: 19.3_
 
 - [ ] 5. 物料生成系统检查点
   - 确保所有测试通过，ask the user if questions arise.
@@ -143,7 +143,7 @@
     - 创建 src/app.ts（Express + Socket.IO）和 src/server.ts
     - 创建 src/db/mysql.ts、src/db/redis.ts
     - 创建 src/db/migrations/（game_rooms、players、game_records、chat_messages 表）
-    - _Requirements: 17.1, 18.3_
+    - _Requirements: 17.1, 19.3_
 
   - [ ] 6.2 实现房间码和二维码工具
     - 创建 src/utils/room-code.ts（6 位字母数字房间码生成）
@@ -268,7 +268,7 @@
     - _Requirements: 9.4, 14.2, 14.3, 14.4_
 
   - [ ] 11.3 创建 Dockerfile（多阶段构建）
-    - _Requirements: 18.3_
+    - _Requirements: 19.3_
 
 - [ ] 12. 游戏玩家系统检查点
   - 确保所有测试通过，ask the user if questions arise.
@@ -279,11 +279,11 @@
     - 创建 init-databases.sql（初始化 material_db 和 game_db）
     - 配置环境变量（AI 服务密钥通过 .env 文件注入）
     - 配置 volumes（mysql-data、material-storage）
-    - _Requirements: 18.1, 18.2, 18.4_
+    - _Requirements: 19.1, 19.2, 19.4_
 
   - [ ] 13.2 创建 .env.example
     - 列出所有环境变量及说明
-    - _Requirements: 18.4_
+    - _Requirements: 19.4_
 
 - [ ] 14. 最终检查点
   - 确保所有测试通过，ask the user if questions arise.

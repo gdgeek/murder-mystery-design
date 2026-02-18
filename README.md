@@ -10,7 +10,7 @@
 
 | 系统 | 端口 | 职责 | 仓库 | 状态 |
 |------|------|------|------|------|
-| 剧本生成系统 | 3002 | AI 生成完整剧本杀 JSON（DM手册、玩家手册、物料、分支结构、多结局） | [murder-mystery-generator](https://github.com/gdgeek/murder-mystery-generator) | ✅ 已实现 |
+| 剧本生成系统 | 3002 | AI 生成完整剧本杀 JSON（DM手册、玩家手册、物料、分支结构、多结局、可游玩幕结构） | [murder-mystery-generator](https://github.com/gdgeek/murder-mystery-generator) | ✅ 已实现 |
 | 物料生成系统 | 3003 | 读取剧本 JSON，生成封面（AI生图）、玩家剧本PDF、DM手册PDF、线索卡（AI生图）、结局视频（AI生视频） | murder-mystery-material（待创建） | 🔲 待开发 |
 | 游戏玩家系统 | 3004 | Web 游玩平台：创建房间、扫码加入、选角、AI主持人自动主持全流程 | murder-mystery-game（待创建） | 🔲 待开发 |
 
@@ -39,7 +39,7 @@
 .kiro/
 ├── specs/
 │   └── murder-mystery-system/
-│       ├── requirements.md    # 需求文档（18项需求）
+│       ├── requirements.md    # 需求文档（19项需求）
 │       ├── design.md          # 设计文档（架构、接口、数据模型、API、WebSocket、正确性属性）
 │       └── tasks.md           # 实现任务清单（14个顶层任务）
 ├── work-log/                  # 工作日志
@@ -62,6 +62,28 @@ cat design-kb/.kiro/specs/murder-mystery-system/design.md
 # 查看任务清单
 cat design-kb/.kiro/specs/murder-mystery-system/tasks.md
 ```
+
+## 共享类型包 @gdgeek/murder-mystery-shared
+
+三个系统通过 `@gdgeek/murder-mystery-shared` npm 包共享 TypeScript 类型定义（Script、ScriptConfig、DMHandbook 等）。该包发布在 GitHub Packages，安装前需配置认证。
+
+### 配置步骤
+
+1. 生成 GitHub Personal Access Token：GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic)，勾选 `read:packages` 权限
+2. 在项目根目录或 `~/.npmrc` 中添加：
+
+```
+@gdgeek:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken=你的GITHUB_TOKEN
+```
+
+3. 安装：
+
+```bash
+npm install @gdgeek/murder-mystery-shared
+```
+
+> 注意：GitHub Packages 即使包是 public 也需要认证 token 才能安装。
 
 ## 快速部署（全部系统）
 

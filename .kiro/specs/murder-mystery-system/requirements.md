@@ -228,7 +228,21 @@
 2. THE Game_Room SHALL 提供 WebSocket 连接端点，支持以下事件：加入房间、离开房间、选择角色、准备就绪、发送聊天消息、投票、向 AI_DM 提问
 3. THE Game_Room SHALL 通过 WebSocket 向客户端推送以下事件：玩家加入/离开、角色选择更新、游戏开始、轮次更新、线索分发、聊天消息、投票发起/结果、AI_DM 发言、游戏结束
 
-### 需求 18：容器化部署
+### 需求 18：可游玩结构（Playable Structure）
+
+**用户故事：** 作为玩家和DM，我希望剧本内容按"幕"组织为线性可游玩序列（序幕→多个中间幕→终幕），每幕包含故事叙述、搜证目标、交流建议和投票/决策，以便能按顺序体验完整游戏。
+
+#### 验收标准
+
+1. THE Script SHALL 支持可选的 `playableStructure` 字段，包含序幕（Prologue）、多个中间幕（Act[]）和终幕（Finale）的有序结构
+2. WHEN 定义 Act 时，THE Act SHALL 包含幕索引、标题、故事叙述、搜证目标、线索ID列表、交流建议和投票定义
+3. WHEN 生成 PlayableStructure 时，THE Generator SHALL 确保中间幕数量等于 `config.roundStructure.totalRounds`
+4. THE PlayableStructure SHALL 包含双视角幕结构：DM可游玩手册（按幕的主持指引）和玩家可游玩手册（按幕的角色内容）
+5. WHEN 系统读取旧版 Script（无 playableStructure 字段）时，THE System SHALL 正常运行不报错
+6. WHEN 提供迁移工具时，THE MigrationTool SHALL 将旧版 roundGuides/roundActions 映射为幕结构，且不修改原始数据
+7. WHEN Generator 生成 PlayableStructure 后，THE Generator SHALL 校验幕数量一致性、线索双向一致性和线索分发指令一致性
+
+### 需求 19：容器化部署
 
 **用户故事：** 作为开发者，我希望三个系统都能通过 Docker Compose 一键部署，以便快速搭建开发和生产环境。
 
