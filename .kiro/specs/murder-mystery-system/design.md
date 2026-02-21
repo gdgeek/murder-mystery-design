@@ -111,7 +111,9 @@ interface Script {
   playerHandbooks: PlayerHandbook[];
   materials: Material[];
   branchStructure: BranchStructure;
-  playableStructure?: PlayableStructure;  // 可选：按幕组织的可游玩结构
+  playableStructure?: PlayableStructure;      // 可选：按幕组织的可游玩结构
+  characterProfiles?: FullCharacterProfile[]; // 可选：角色设定（角色优先模式生成）
+  generationMode?: GenerationMode;            // 生成模式：'oneshot' | 'character_first'
 }
 ```
 
@@ -264,6 +266,85 @@ interface PlayerFinaleContent {
 - `playerHandbook.roundActions[i]` → `playerActContents[i]`
 - `dmHandbook.truthReveal` → `finale.truthReveal`
 - `dmHandbook.endings` → `finale.endings`
+
+#### 1.2 角色系统类型定义（Character System）
+
+角色系统采用"通用角色库 + 剧本绑定"的分层设计，实现角色跨剧本复用。核心原则：角色的性格、外貌、能力等通用属性存储在角色库中，不涉及任何具体剧情；剧本相关的背景故事、动机、秘密、关系等数据通过绑定表关联。
+
+```typescript
+// ─── 生成模式 ───
+type GenerationMode = 'oneshot' | 'character_first';
+
+// ─── 基础枚举/类型 ───
+type ZodiacSign =
+  | 'aries' | 'taurus' | 'gemini' | 'cancer'
+  | 'leo' | 'virgo' | 'libra' | 'scorpio'
+  | 'sagittarius' | 'capricorn' | 'aquarius' | 'pisces';
+
+type BloodType = 'A' | 'B' | 'O' | 'AB';
+
+/** 角色类型（剧本中的角色定位，非角色库固有属性） */
+type CharacterType = 'player' | 'npc';
+
+/** 叙事功能定位 */
+type NarrativeRole =
+  | 'murderer' | 'detective' | 'witness' | 'suspect'
+  | 'victim' | 'accomplice' | 'bystander';
+
+/** 关系类型 */
+type RelationshipType =
+  | 'ally' | 'rival' | 'lover' | 'family' | 'colleague'
+  | 'stranger' | 'enemy' | 'mentor' | 'suspect';
+
+/** 角色关系（扩展版） */
+interface CharacterProfileRelationship {
+  targetCharacterId: string;
+  targetCharacterName: string;
+  relationshipType: RelationshipType;
+  description: string;
+}
+
+// ─── 角色设定（通用角色库） ───
+// 存储与剧本无关的通用角色属性，便于跨剧本复用。
+// 性格、外貌、能力等描述应保持通用，不涉及具体剧情。
+interface CharacterProfile {
+  characterId: string;
+  characterName: string;
+  gender: string;
+  zodiacSign?: ZodiacSign;
+  bloodType: BloodType;
+  mbtiType: string;
+  personality: string;     // 通用性格描述（不涉及具体剧情）
+  appearance: string;      // 通用外貌描述（不涉及具体剧情）
+  specialTraits?: string[]; // 通用能力/特质（不涉及具体剧情）
+}
+
+// ─── 剧本角色绑定（剧本关联表） ───
+// 存储角色在某个剧本中的特定设定：类型、背景故事、动机、秘密、关系等。
+interface ScriptCharacterBinding {
+  characterId: string;
+  characterName: string;
+  characterType: CharacterType;
+  backgroundStory: string;
+  primaryMotivation: string;
+  secrets: string[];
+  relationships: CharacterProfileRelationship[];
+  secondaryMotivations?: string[];
+  narrativeRole?: NarrativeRole;
+}
+
+// ─── 完整角色设定（生成阶段使用） ───
+// 合并通用角色属性 + 剧本关联属性，用于 LLM 生成流程。
+interface FullCharacterProfile extends CharacterProfile, ScriptCharacterBinding {}
+```
+
+**角色优先生成流程（character_first 模式）**：
+
+两阶段生成：
+1. **角色生成阶段**：根据 ScriptConfig（时代、地点、主题、人数）调用 LLM 生成 FullCharacterProfile 数组，返回角色草稿供用户审查编辑
+2. **故事生成阶段**：用户确认角色后，将角色设定注入故事生成提示词，LLM 基于已确定的角色生成完整剧本（DMHandbook、PlayerHandbooks、Materials、BranchStructure、PlayableStructure）
+
+角色确认时自动持久化：通用属性写入 `characters` 表，剧本绑定数据写入 `script_character_sets` 表。角色 ID 在确认时替换为 UUID，确保跨剧本唯一性。
 
 ### 2. 物料生成系统
 
@@ -728,6 +809,44 @@ CREATE TABLE chat_messages (
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   FOREIGN KEY (room_id) REFERENCES game_rooms(id),
   INDEX idx_room_time (room_id, created_at)
+);
+```
+
+### 剧本生成系统角色库（generator_db）
+
+```sql
+-- 通用角色库（跨剧本复用）
+CREATE TABLE characters (
+  character_id VARCHAR(36) PRIMARY KEY,
+  character_name VARCHAR(100) NOT NULL,
+  gender VARCHAR(20) NOT NULL,
+  zodiac_sign VARCHAR(20),
+  blood_type ENUM('A', 'B', 'O', 'AB') NOT NULL,
+  mbti_type VARCHAR(10) NOT NULL,
+  personality TEXT NOT NULL,
+  appearance TEXT NOT NULL,
+  special_traits JSON,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- 剧本角色绑定（角色在某个剧本中的特定设定）
+CREATE TABLE script_character_sets (
+  id VARCHAR(36) PRIMARY KEY,
+  script_id VARCHAR(36) NOT NULL,
+  character_id VARCHAR(36) NOT NULL,
+  character_type ENUM('player', 'npc') NOT NULL DEFAULT 'player',
+  narrative_role VARCHAR(50),
+  background_story TEXT,
+  primary_motivation TEXT,
+  secondary_motivations JSON,
+  secrets JSON,
+  relationships JSON,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  UNIQUE KEY uk_script_character (script_id, character_id),
+  INDEX idx_script_id (script_id),
+  INDEX idx_character_id (character_id)
 );
 ```
 

@@ -35,7 +35,16 @@
 
 ## Script_JSON 样例
 
-`script-json-example.json` 是一份由剧本生成系统实际生成的完整 Script_JSON 样例（4人本格剧本，2幕），包含旧结构（dmHandbook/playerHandbooks）和新的可游玩幕结构（playableStructure）。其他系统可参照此文件理解数据格式。
+`script-json-example.json` 是一份由剧本生成系统以「角色优先」模式（character_first）实际生成的完整 Script_JSON 样例（4人本格剧本，维多利亚时代密室案，3幕）。包含：
+
+- 旧结构：dmHandbook / playerHandbooks / materials / branchStructure
+- 可游玩幕结构：playableStructure（prologue → acts → finale + DM/玩家手册）
+- 角色设定：characterProfiles（通用属性 + 剧本关联属性）
+- 生成模式：generationMode = "character_first"
+
+角色设定分为两层：
+- 通用角色属性（personality, appearance, specialTraits, zodiacSign, bloodType, mbtiType）— 存入角色库，可跨剧本复用
+- 剧本关联属性（characterType, backgroundStory, primaryMotivation, secrets, relationships, narrativeRole）— 仅用于本剧本
 
 ## 知识库结构
 

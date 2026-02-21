@@ -1,1025 +1,1745 @@
 {
-    "id": "4ba54488-a973-4516-9cbe-b2c77a0f09bb",
-    "tags": [],
-    "title": "\u67ab\u9732\u522b\u5885\u7684\u6740\u610f",
-    "config": {
-        "id": "7d38547c-8b32-451c-8d11-5873120cc238",
-        "era": "\u73b0\u4ee3",
-        "style": "detective",
-        "theme": "\u8c0b\u6740\u60ac\u7591",
-        "ageGroup": "adult",
-        "gameType": "honkaku",
-        "language": "zh",
-        "location": "\u522b\u5885",
-        "playerCount": 4,
-        "durationHours": 2,
-        "deductionRatio": 50,
-        "roundStructure": {
-            "rounds": [
-                {
-                    "readingMinutes": 10,
-                    "discussionMinutes": 15,
-                    "investigationMinutes": 15
-                },
-                {
-                    "readingMinutes": 10,
-                    "discussionMinutes": 15,
-                    "investigationMinutes": 15
-                }
-            ],
-            "totalRounds": 2,
-            "revealMinutes": 10,
-            "summaryMinutes": 20,
-            "finalVoteMinutes": 10
-        },
-        "restorationRatio": 50
-    },
-    "status": "ready",
-    "aiModel": "doubao-seed-2-0-mini-260215",
-    "version": "v1.0",
-    "configId": "7d38547c-8b32-451c-8d11-5873120cc238",
-    "createdAt": "2026-02-21T04:33:56.717Z",
-    "materials": [
+  "id": "7b67d4c9-8870-49e8-a5c3-061149f7d753",
+  "tags": [],
+  "title": "雾中卡文迪许庄园的机械密室",
+  "config": {
+    "id": "64c410ec-d88f-45dc-b591-f151c913b1a0",
+    "era": "维多利亚时代",
+    "style": "detective",
+    "theme": "一位著名发明家在自己的庄园中被发现死于密室，所有门窗从内部锁死，唯一的线索是一台神秘的自动机械装置",
+    "ageGroup": "adult",
+    "gameType": "honkaku",
+    "language": "zh-CN",
+    "location": "伦敦雾中庄园",
+    "playerCount": 4,
+    "durationHours": 3,
+    "deductionRatio": 60,
+    "roundStructure": {
+      "rounds": [
         {
-            "id": "mat001",
-            "type": "clue_card",
-            "clueId": "clue001",
-            "content": "\u4e66\u623f\u73b0\u573a\uff1a\u6797\u67ab\u8db4\u5728\u4e66\u684c\u524d\uff0c\u80f8\u53e3\u63d2\u7740\u4e66\u623f\u88c1\u7eb8\u5200\uff0c\u8840\u8ff9\u96c6\u4e2d\u5728\u4e66\u684c\u533a\u57df\uff0c\u7a97\u6237\u4ece\u5185\u90e8\u63d2\u9500\u9501\u6b7b\uff0c\u4e66\u684c\u62bd\u5c49\u63d2\u7740\u4e66\u623f\u94a5\u5319",
-            "metadata": {
-                "level": "\u8f85\u52a9",
-                "location": "\u4e66\u623f\u73b0\u573a"
-            },
-            "associatedCharacterId": "none"
+          "readingMinutes": 13,
+          "discussionMinutes": 15,
+          "investigationMinutes": 15
         },
         {
-            "id": "mat002",
-            "type": "clue_card",
-            "clueId": "clue002",
-            "content": "\u4e66\u623f\u7a97\u6237\u63d2\u9500\u4e0a\u6709\u7ec6\u5fae\u9c7c\u7ebf\u7f20\u7ed5\u75d5\u8ff9",
-            "metadata": {
-                "level": "\u5173\u952e",
-                "location": "\u4e66\u623f\u73b0\u573a"
-            },
-            "associatedCharacterId": "char03"
+          "readingMinutes": 13,
+          "discussionMinutes": 15,
+          "investigationMinutes": 15
         },
         {
-            "id": "mat003",
-            "type": "clue_card",
-            "clueId": "clue003",
-            "content": "\u4e66\u684c\u62bd\u5c49\u94a5\u5319\u5b54\u6709\u7ec6\u5fae\u9c7c\u7ebf\u5212\u75d5",
-            "metadata": {
-                "level": "\u5173\u952e",
-                "location": "\u4e66\u623f\u73b0\u573a"
-            },
-            "associatedCharacterId": "char03"
-        },
-        {
-            "id": "mat004",
-            "type": "clue_card",
-            "clueId": "clue004",
-            "content": "\u5ba2\u5385\u5427\u53f0\u6709\u4e00\u676f\u559d\u5269\u7684\u5a01\u58eb\u5fcc\uff0c\u676f\u4e0a\u6709\u9648\u9ed8\u7684\u6307\u7eb9",
-            "metadata": {
-                "level": "\u8f85\u52a9",
-                "location": "\u5ba2\u5385"
-            },
-            "associatedCharacterId": "char01"
-        },
-        {
-            "id": "mat005",
-            "type": "clue_card",
-            "clueId": "clue005",
-            "content": "\u82b1\u56ed\u6709\u4e00\u4e32\u82cf\u665a\u7684\u811a\u5370\uff0c\u5ef6\u4f38\u81f3\u522b\u5885\u540e\u95e8",
-            "metadata": {
-                "level": "\u8f85\u52a9",
-                "location": "\u82b1\u56ed"
-            },
-            "associatedCharacterId": "char02"
-        },
-        {
-            "id": "mat006",
-            "type": "clue_card",
-            "clueId": "clue006",
-            "content": "\u9910\u5385\u9910\u684c\u6709\u6797\u67ab\u7684\u9057\u5631\u8349\u7a3f\uff0c\u63d0\u53ca\u5c06\u522b\u5885\u7559\u7ed9\u5f1f\u5f1f\u6797\u9633",
-            "metadata": {
-                "level": "\u8f85\u52a9",
-                "location": "\u9910\u5385"
-            },
-            "associatedCharacterId": "none"
-        },
-        {
-            "id": "mat007",
-            "type": "clue_card",
-            "clueId": "clue007",
-            "content": "\u5218\u742a\u7684\u5ba2\u623f\u5185\u6709\u4e00\u74f6\u672a\u5f00\u5c01\u7684\u5b89\u7720\u836f",
-            "metadata": {
-                "level": "\u5e72\u6270",
-                "location": "\u5218\u742a\u5ba2\u623f"
-            },
-            "associatedCharacterId": "char04"
-        },
-        {
-            "id": "mat008",
-            "type": "clue_card",
-            "clueId": "clue008",
-            "content": "\u8f66\u5e93\u5185\u6709\u4e00\u5377\u900f\u660e\u9c7c\u7ebf\uff0c\u5269\u4f59\u957f\u5ea6\u7ea65\u7c73",
-            "metadata": {
-                "level": "\u5173\u952e",
-                "location": "\u8f66\u5e93"
-            },
-            "associatedCharacterId": "char03"
-        },
-        {
-            "id": "mat009",
-            "type": "clue_card",
-            "clueId": "clue009",
-            "content": "\u82cf\u665a\u7684\u5305\u5185\u6709\u7236\u4eb22018\u5e74\u624b\u672f\u8d39\u8d26\u5355\uff0c\u7f34\u8d39\u4eba\u4e3a\u6797\u67ab",
-            "metadata": {
-                "level": "\u5173\u952e",
-                "location": "\u82cf\u665a\u5ba2\u623f"
-            },
-            "associatedCharacterId": "char02"
-        },
-        {
-            "id": "mat010",
-            "type": "clue_card",
-            "clueId": "clue010",
-            "content": "\u5f20\u6d69\u7684\u897f\u88c5\u8896\u53e3\u6709\u4e00\u6839\u900f\u660e\u9c7c\u7ebf\u6b8b\u7559",
-            "metadata": {
-                "level": "\u5173\u952e",
-                "location": "\u5f20\u6d69\u5ba2\u623f"
-            },
-            "associatedCharacterId": "char03"
-        },
-        {
-            "id": "mat011",
-            "type": "clue_card",
-            "clueId": "clue011",
-            "content": "\u9648\u9ed8\u7684\u7b14\u8bb0\u672c\u5185\u67092018\u5e74\u59b9\u59b9\u7684\u533b\u7597\u4e8b\u6545\u62a5\u544a\uff0c\u4e3b\u6cbb\u533b\u751f\u4e3a\u6797\u67ab",
-            "metadata": {
-                "level": "\u8f85\u52a9",
-                "location": "\u9648\u9ed8\u5ba2\u623f"
-            },
-            "associatedCharacterId": "char01"
-        },
-        {
-            "id": "mat012",
-            "type": "clue_card",
-            "clueId": "clue012",
-            "content": "\u5218\u742a\u7684\u624b\u673a\u5185\u6709\u6797\u67ab\u7684\u5a01\u80c1\u77ed\u4fe1\uff1a\u201c\u4f60\u5f53\u5e74\u7684\u7cbe\u795e\u75c5\u53f2\u8981\u662f\u88ab\u672a\u5a5a\u592b\u77e5\u9053\uff0c\u4f60\u5c31\u5b8c\u4e86\u201d",
-            "metadata": {
-                "level": "\u5173\u952e",
-                "location": "\u5218\u742a\u5ba2\u623f"
-            },
-            "associatedCharacterId": "char04"
-        },
-        {
-            "id": "mat013",
-            "type": "clue_card",
-            "clueId": "clue013",
-            "content": "\u6797\u67ab\u7684\u624b\u673a\u5185\u6709\u5f20\u6d69\u7684\u77ed\u4fe1\uff1a\u201c\u4f60\u8981\u662f\u6562\u66dd\u5149\u6211\u7684\u4e8b\uff0c\u6211\u5c31\u5bf9\u4f60\u4e0d\u5ba2\u6c14\u201d",
-            "metadata": {
-                "level": "\u8f85\u52a9",
-                "location": "\u4e66\u623f\u73b0\u573a"
-            },
-            "associatedCharacterId": "char03"
-        },
-        {
-            "id": "mat014",
-            "type": "clue_card",
-            "clueId": "clue014",
-            "content": "\u6797\u67ab\u7684\u7535\u8111\u5185\u6709\u5f20\u6d69\u632a\u7528\u5f8b\u6240\u5ba2\u6237\u8d44\u91d1\u7684\u8bc1\u636e\u6587\u4ef6",
-            "metadata": {
-                "level": "\u8f85\u52a9",
-                "location": "\u4e66\u623f\u73b0\u573a"
-            },
-            "associatedCharacterId": "char03"
-        },
-        {
-            "id": "mat015",
-            "type": "clue_card",
-            "clueId": "clue015",
-            "content": "\u4e66\u623f\u88c1\u7eb8\u5200\u4e0a\u6709\u6a21\u7cca\u6307\u7eb9\uff0c\u5df2\u88ab\u64e6\u62ed\u5e72\u51c0",
-            "metadata": {
-                "level": "\u5e72\u6270",
-                "location": "\u4e66\u623f\u73b0\u573a"
-            },
-            "associatedCharacterId": "char03"
+          "readingMinutes": 13,
+          "discussionMinutes": 15,
+          "investigationMinutes": 15
         }
-    ],
-    "updatedAt": "2026-02-21T04:33:56.717Z",
-    "aiProvider": "doubao",
-    "dmHandbook": {
-        "endings": [
-            "\u771f\u76f8\u7ed3\u5c40\uff1a\u6210\u529f\u6307\u8ba4\u771f\u51f6\u5e76\u8fd8\u539f\u5168\u90e8\u7ec6\u8282",
-            "\u9519\u5224\u7ed3\u5c40\uff1a\u6307\u8ba4\u771f\u51f6\u9519\u8bef\uff0c\u771f\u51f6\u9003\u8131",
-            "\u5bc6\u5ba4\u8bef\u5224\u7ed3\u5c40\uff1a\u6b63\u786e\u7834\u89e3\u5bc6\u5ba4\u4f46\u6307\u8ba4\u9519\u8bef\u5acc\u7591\u4eba"
-        ],
-        "overview": "\u8fd9\u662f\u4e00\u4e2a4\u4eba\u672c\u683c\u8c0b\u6740\u60ac\u7591\u5267\u672c\u6740\uff0c\u6e38\u620f\u65f6\u957f\u7ea62\u5c0f\u65f6\uff0c\u73a9\u5bb6\u5c06\u626e\u6f14\u53d7\u9080\u6765\u5230\u67ab\u9732\u522b\u5885\u7684\u56db\u4f4d\u65e7\u53cb\uff0c\u5728\u522b\u5885\u4e3b\u4eba\u6797\u67ab\u88ab\u6740\u540e\u5c55\u5f00\u63a8\u7406\uff0c\u8fd8\u539f\u6848\u4ef6\u771f\u76f8\u3002\u5267\u672c\u5305\u542b\u5bc6\u5ba4\u8be1\u8ba1\u4e0e\u4e0d\u5728\u573a\u8bc1\u660e\u63a8\u7406\uff0c\u8fd8\u539f\u4e0e\u63a8\u7406\u5404\u536050%\uff0c\u7ebf\u7d22\u5206\u4e3a\u4e09\u7ea7\uff0c\u9700\u901a\u8fc7\u5b8c\u6574\u903b\u8f91\u94fe\u9501\u5b9a\u771f\u51f6\u3002",
-        "timeline": [
-            "2024\u5e7410\u670812\u65e5 18:00 \u5168\u5458\u62b5\u8fbe\u67ab\u9732\u522b\u5885\uff0c\u6797\u67ab\u8fce\u63a5",
-            "19:00 \u665a\u9910\u5f00\u59cb\uff0c\u6797\u67ab\u79f0\u6b21\u65e5\u6709\u91cd\u8981\u4e8b\u5ba3\u5e03",
-            "21:00 \u665a\u9910\u7ed3\u675f\uff0c\u6797\u67ab\u72ec\u81ea\u524d\u5f80\u4e66\u623f",
-            "21:20 \u9648\u9ed8\u8def\u8fc7\u4e66\u623f\uff0c\u770b\u5230\u6797\u67ab\u5750\u5728\u4e66\u684c\u524d",
-            "21:30 \u82cf\u665a\u524d\u5f80\u82b1\u56ed\uff0c\u5f20\u6d69\u524d\u5f80\u8f66\u5e93\u53d6\u7ea2\u9152\uff0c\u5218\u742a\u8fd4\u56de\u5ba2\u623f",
-            "22:00 \u82cf\u665a\u8fd4\u56de\u522b\u5885\uff0c\u4e0e\u9648\u9ed8\u4ea4\u8c08\uff0c\u5f20\u6d69\u643a\u7ea2\u9152\u8fd4\u56de\uff0c\u4f17\u4eba\u5404\u81ea\u56de\u623f",
-            "22:30 \u5218\u742a\u524d\u5f80\u53a8\u623f\u5012\u6c34\uff0c\u8def\u8fc7\u4e66\u623f\u542c\u5230\u7ffb\u4e66\u58f0",
-            "00:10 \u5218\u742a\u5931\u7720\u8d70\u5230\u5ba2\u5385\uff0c\u4ec5\u9648\u9ed8\u5728\u770b\u7535\u5f71",
-            "00:15 \u82cf\u665a\u542c\u5230\u4e66\u623f\u5f02\u54cd\uff0c\u53eb\u9192\u5176\u4ed6\u4e09\u4eba",
-            "00:20 \u56db\u4eba\u96c6\u5408\u5728\u4e66\u623f\u95e8\u53e3\uff0c\u95e8\u53cd\u9501\u65e0\u6cd5\u6253\u5f00",
-            "00:25 \u4f17\u4eba\u649e\u5f00\u623f\u95e8\uff0c\u53d1\u73b0\u6797\u67ab\u6b7b\u4e8e\u5bc6\u5ba4\u4e66\u623f"
-        ],
-        "characters": [
-            {
-                "characterId": "char01",
-                "description": "32\u5c81\u79c1\u5bb6\u4fa6\u63a2\uff0c\u6c89\u7a33\u5e72\u7ec3\uff0c\u968f\u8eab\u5e26\u9ed1\u8272\u516c\u6587\u5305",
-                "characterName": "\u9648\u9ed8"
-            },
-            {
-                "characterId": "char02",
-                "description": "30\u5c81\u82b1\u827a\u5e08\uff0c\u6e29\u67d4\u4f18\u96c5\uff0c\u66fe\u662f\u6797\u67ab\u524d\u5973\u53cb",
-                "characterName": "\u82cf\u665a"
-            },
-            {
-                "characterId": "char03",
-                "description": "33\u5c81\u5f8b\u5e08\uff0c\u6797\u67ab\u53d1\u5c0f\uff0c\u897f\u88c5\u9769\u5c65\u795e\u8272\u7d27\u5f20",
-                "characterName": "\u5f20\u6d69"
-            },
-            {
-                "characterId": "char04",
-                "description": "29\u5c81\u62a4\u58eb\uff0c\u6797\u67ab\u5b66\u59b9\uff0c\u795e\u8272\u4e0d\u5b89",
-                "characterName": "\u5218\u742a"
-            }
-        ],
-        "roundGuides": [
-            "\u7b2c\u4e00\u5e55\uff1a\u521d\u6b65\u4e86\u89e3\u6848\u4ef6\uff0c\u641c\u8bc1\u516c\u5171\u533a\u57df\u4e0e\u73b0\u573a\uff0c\u8ba8\u8bba\u521d\u6b65\u5acc\u7591\u4eba",
-            "\u7b2c\u4e8c\u5e55\uff1a\u6df1\u5165\u641c\u8bc1\u79c1\u4eba\u533a\u57df\uff0c\u7834\u89e3\u5bc6\u5ba4\u8be1\u8ba1\uff0c\u9501\u5b9a\u771f\u51f6",
-            "\u6700\u7ec8\u6295\u7968\uff1a\u6307\u8ba4\u771f\u51f6\u5e76\u8fd8\u539f\u5b8c\u6574\u6848\u4ef6"
-        ],
-        "truthReveal": "\u771f\u51f6\u4e3a\u5f20\u6d69\uff08char03\uff09\u3002\u4f5c\u6848\u52a8\u673a\uff1a\u5f20\u6d69\u632a\u7528\u5f8b\u6240\u5ba2\u6237\u8d44\u91d1\uff0c\u88ab\u6797\u67ab\u638c\u63e1\u8bc1\u636e\u5e76\u5a01\u80c1\u66dd\u5149\uff0c\u4e3a\u706d\u53e3\u884c\u51f6\u3002\u4f5c\u6848\u65f6\u95f4\uff1a21:30-22:00\uff0c\u5f20\u6d69\u4ee5\u53d6\u7ea2\u9152\u4e3a\u501f\u53e3\u6f5c\u5165\u4e66\u623f\u6740\u4eba\u3002\u5bc6\u5ba4\u624b\u6cd5\uff1a\u7528\u9c7c\u7ebf\u7a7f\u8fc7\u4e66\u684c\u94a5\u5319\u5b54\uff0c\u7ed5\u8fc7\u7a97\u6237\u63d2\u9500\uff0c\u4ece\u7a97\u5916\u9501\u7a97\u540e\u62c9\u9c7c\u7ebf\u5c06\u94a5\u5319\u9001\u5165\u62bd\u5c49\uff0c\u526a\u65ad\u9c7c\u7ebf\u5b8c\u6210\u5bc6\u5ba4\u3002\u5173\u952e\u8bc1\u636e\uff1a\u4e66\u623f\u63d2\u9500\u9c7c\u7ebf\u75d5\u8ff9\u3001\u5f20\u6d69\u8896\u53e3\u9c7c\u7ebf\u6b8b\u7559\u3001\u8f66\u5e93\u9c7c\u7ebf\u5377\u8f74\u3001\u6797\u67ab\u624b\u673a\u5185\u7684\u632a\u7528\u8bc1\u636e\u77ed\u4fe1\u3002",
-        "judgingRules": {
-            "winConditions": "\u73a9\u5bb6\u6210\u529f\u6307\u8ba4\u771f\u51f6\u5e76\u8fd8\u539f\u5b8c\u6574\u6848\u4ef6\u7ec6\u8282\u5373\u4e3a\u80dc\u5229",
-            "scoringCriteria": "\u6b63\u786e\u6307\u8ba4\u771f\u51f6\u5f975\u5206\uff0c\u6b63\u786e\u7834\u89e3\u5bc6\u5ba4\u5f973\u5206\uff0c\u8fd8\u539f\u5168\u90e8\u52a8\u673a\u5f972\u5206\uff0c\u603b\u520610\u5206"
-        },
-        "clueDistribution": [
-            "\u7b2c\u4e00\u5e55\uff08act1\uff09\u5206\u53d1\u7ebf\u7d22\uff1aclue001-clue007\uff0c\u542b3\u6761\u5173\u952e\u7ebf\u7d22",
-            "\u7b2c\u4e8c\u5e55\uff08act2\uff09\u5206\u53d1\u7ebf\u7d22\uff1aclue008-clue015\uff0c\u542b2\u6761\u5173\u952e\u7ebf\u7d22",
-            "\u603b\u7ebf\u7d2215\u6761\uff0c\u5173\u952e\u7ebf\u7d225\u6761\uff0c\u5360\u6bd433%\u7b26\u5408\u8981\u6c42"
-        ],
-        "branchDecisionPoints": [
-            "\u7b2c\u4e00\u5e55\u6295\u7968\uff1a\u6307\u8ba4\u521d\u6b65\u5acc\u7591\u4eba",
-            "\u7b2c\u4e8c\u5e55\u6295\u7968\uff1a\u7834\u89e3\u5bc6\u5ba4\u624b\u6cd5",
-            "\u6700\u7ec8\u6295\u7968\uff1a\u6307\u8ba4\u771f\u51f6"
-        ]
+      ],
+      "totalRounds": 3,
+      "revealMinutes": 10,
+      "summaryMinutes": 30,
+      "finalVoteMinutes": 10
     },
-    "branchStructure": {
-        "edges": [
+    "restorationRatio": 40
+  },
+  "status": "ready",
+  "aiModel": "doubao-seed-2-0-mini-260215",
+  "version": "v1.0",
+  "configId": "64c410ec-d88f-45dc-b591-f151c913b1a0",
+  "createdAt": "2026-02-21T12:39:33.164Z",
+  "materials": [
+    {
+      "id": "mat001",
+      "type": "clue_card",
+      "clueId": "clue001",
+      "content": "书房木门插销上缠绕过纤细马鬃线的痕迹，末端有轻微拉扯断裂的毛边",
+      "metadata": {
+        "level": "key"
+      },
+      "associatedCharacterId": "all"
+    },
+    {
+      "id": "mat002",
+      "type": "clue_card",
+      "clueId": "clue002",
+      "content": "实验室自动装置的传动杆上残留少量马鬃线纤维，与书房插销上的痕迹一致",
+      "metadata": {
+        "level": "key"
+      },
+      "associatedCharacterId": "d24a81ea-3880-4115-86aa-6dfd8aa79e13,c6b01875-b605-4738-9775-1259ccb896f3"
+    },
+    {
+      "id": "mat003",
+      "type": "clue_card",
+      "clueId": "clue003",
+      "content": "格蕾丝的皮质收纳袋内有被撕碎的庄园公款账本碎片，标注有50英镑支出记录与“弟弟医药费”字样",
+      "metadata": {
+        "level": "key"
+      },
+      "associatedCharacterId": "db547eed-3bbe-441a-9691-199e0679b9cb"
+    },
+    {
+      "id": "mat004",
+      "type": "clue_card",
+      "clueId": "clue004",
+      "content": "埃利亚斯的皮质工具袋内发现一小罐未标记的钽金属粉末，与实验室失窃的稀有金属成分一致",
+      "metadata": {
+        "level": "key"
+      },
+      "associatedCharacterId": "6da39b81-d33b-48df-94f9-da53bde5c78e"
+    },
+    {
+      "id": "mat005",
+      "type": "clue_card",
+      "clueId": "clue005",
+      "content": "阿尔弗雷德的皮质笔记本有一页被强行撕掉的痕迹，残留墨水痕迹显示为“电磁传动锁”相关技术笔记",
+      "metadata": {
+        "level": "key"
+      },
+      "associatedCharacterId": "c6b01875-b605-4738-9775-1259ccb896f3"
+    },
+    {
+      "id": "mat006",
+      "type": "clue_card",
+      "clueId": "clue006",
+      "content": "克莱尔的刺绣手袋内发现一份被修改的遗嘱草稿，原捐赠慈善机构的条款被改为将全部财产转移至克莱尔名下",
+      "metadata": {
+        "level": "key"
+      },
+      "associatedCharacterId": "0ce10c2b-cd2b-47df-987d-04d3d05ac9c7"
+    },
+    {
+      "id": "mat007",
+      "type": "clue_card",
+      "clueId": "clue007",
+      "content": "托马斯的大型工具箱内缺失编号为M-7的核心齿轮，与实验室自动装置上的缺失零件完全匹配",
+      "metadata": {
+        "level": "key"
+      },
+      "associatedCharacterId": "d24a81ea-3880-4115-86aa-6dfd8aa79e13"
+    },
+    {
+      "id": "mat008",
+      "type": "clue_card",
+      "clueId": "clue008",
+      "content": "书房所有门窗均从内部锁死，无撬动痕迹，为标准密室状态",
+      "metadata": {
+        "level": "auxiliary"
+      },
+      "associatedCharacterId": "all"
+    },
+    {
+      "id": "mat009",
+      "type": "clue_card",
+      "clueId": "clue009",
+      "content": "死者死因为头部钝器击打，书房黄铜镇纸上残留白色棉质手套的纤维痕迹",
+      "metadata": {
+        "level": "auxiliary"
+      },
+      "associatedCharacterId": "db547eed-3bbe-441a-9691-199e0679b9cb"
+    },
+    {
+      "id": "mat010",
+      "type": "clue_card",
+      "clueId": "clue010",
+      "content": "餐厅餐桌上残留一杯未喝完的热可可，杯壁上有格蕾丝的指纹",
+      "metadata": {
+        "level": "auxiliary"
+      },
+      "associatedCharacterId": "db547eed-3bbe-441a-9691-199e0679b9cb"
+    },
+    {
+      "id": "mat011",
+      "type": "clue_card",
+      "clueId": "clue011",
+      "content": "埃利亚斯的袖口带有磨损的银色刺绣袖扣，工具袋内装有精密螺丝刀与镊子",
+      "metadata": {
+        "level": "disturb"
+      },
+      "associatedCharacterId": "6da39b81-d33b-48df-94f9-da53bde5c78e"
+    },
+    {
+      "id": "mat012",
+      "type": "clue_card",
+      "clueId": "clue012",
+      "content": "克莱尔的手袋内装有绘画颜料与素描本，画布上有庄园风景的草稿",
+      "metadata": {
+        "level": "disturb"
+      },
+      "associatedCharacterId": "0ce10c2b-cd2b-47df-987d-04d3d05ac9c7"
+    },
+    {
+      "id": "mat013",
+      "type": "clue_card",
+      "clueId": "clue013",
+      "content": "阿尔弗雷德的深色风衣上沾有少量实验室的机油痕迹",
+      "metadata": {
+        "level": "disturb"
+      },
+      "associatedCharacterId": "c6b01875-b605-4738-9775-1259ccb896f3"
+    },
+    {
+      "id": "mat014",
+      "type": "clue_card",
+      "clueId": "clue014",
+      "content": "托马斯的帆布手套上沾有少量黄铜锈迹，与书房镇纸的材质一致",
+      "metadata": {
+        "level": "disturb"
+      },
+      "associatedCharacterId": "d24a81ea-3880-4115-86aa-6dfd8aa79e13"
+    },
+    {
+      "id": "mat015",
+      "type": "clue_card",
+      "clueId": "clue015",
+      "content": "格蕾丝的折叠雨伞上带有夜间的露水痕迹",
+      "metadata": {
+        "level": "disturb"
+      },
+      "associatedCharacterId": "db547eed-3bbe-441a-9691-199e0679b9cb"
+    }
+  ],
+  "updatedAt": "2026-02-21T12:39:33.164Z",
+  "aiProvider": "doubao",
+  "dmHandbook": {
+    "endings": [
+      {
+        "name": "雾中逃脱",
+        "endingId": "ending001",
+        "narrative": "真凶格蕾丝成功销毁证据，以意外事故结案，庄园的秘密被永远尘封",
+        "triggerCondition": "最终投票指认真凶错误率超过60%"
+      },
+      {
+        "name": "机械真相",
+        "endingId": "ending002",
+        "narrative": "真凶格蕾丝被绳之以法，案件真相通过机械线索被完整还原",
+        "triggerCondition": "最终投票准确指认真凶"
+      }
+    ],
+    "overview": "本剧本为维多利亚时代背景的本格推理剧本杀，玩家人数4人+1名NPC证人，游戏时长约3小时。故事围绕著名发明家劳伦斯·卡文迪许死于封闭书房的密室命案展开，所有玩家均为嫌疑人，需通过线索推理、时间线交叉验证还原案件真相，找出真凶并洗清自身嫌疑。",
+    "timeline": [
+      {
+        "time": "18:00",
+        "event": "埃利亚斯从伦敦采购稀有零件返回庄园，进入实验室加班整理物资"
+      },
+      {
+        "time": "19:00",
+        "event": "阿尔弗雷德抵达庄园，格蕾丝接待并安排客房"
+      },
+      {
+        "time": "19:30",
+        "event": "克莱尔抵达庄园，入住北侧客房"
+      },
+      {
+        "time": "20:00",
+        "event": "全员在餐厅共进晚餐，托马斯首次与众人见面"
+      },
+      {
+        "time": "20:45",
+        "event": "晚餐结束，埃利亚斯返回实验室检查零件，阿尔弗雷德借口散步前往实验室附近"
+      },
+      {
+        "time": "21:00",
+        "event": "埃利亚斯离开实验室返回工具间，随后偷偷返回主宅书房外探查"
+      },
+      {
+        "time": "21:10",
+        "event": "克莱尔来到书房门外偷听劳伦斯的谈话"
+      },
+      {
+        "time": "21:15",
+        "event": "格蕾丝进入书房送热可可，与劳伦斯因挪用公款一事发生争执"
+      },
+      {
+        "time": "21:20",
+        "event": "格蕾丝离开书房，随后返回实验室取走马鬃线用于制造密室"
+      },
+      {
+        "time": "21:25",
+        "event": "阿尔弗雷德进入实验室修改装置程序，托马斯回到实验室发现核心齿轮缺失"
+      },
+      {
+        "time": "21:30",
+        "event": "装置启动，传动杆拉动马鬃线锁上书房插销，细线断裂残留痕迹"
+      },
+      {
+        "time": "次日8:00",
+        "event": "格蕾丝发现书房门无法打开，呼叫众人后破门发现死者劳伦斯"
+      }
+    ],
+    "characters": [
+      {
+        "role": "玩家嫌疑人",
+        "basicInfo": "男，A型血，ISTJ，严谨守序的首席技术助手，负责庄园机械实验室事务",
+        "characterId": "6da39b81-d33b-48df-94f9-da53bde5c78e",
+        "characterName": "埃利亚斯·索恩"
+      },
+      {
+        "role": "玩家嫌疑人",
+        "basicInfo": "女，B型血，ESFP，热情干练的庄园管家，负责庄园日常运转",
+        "characterId": "db547eed-3bbe-441a-9691-199e0679b9cb",
+        "characterName": "格蕾丝·黑斯廷斯"
+      },
+      {
+        "role": "玩家嫌疑人",
+        "basicInfo": "男，AB型血，INTJ，知名电气工程师，受邀参加装置发布会",
+        "characterId": "c6b01875-b605-4738-9775-1259ccb896f3",
+        "characterName": "阿尔弗雷德·芬奇"
+      },
+      {
+        "role": "玩家嫌疑人",
+        "basicInfo": "女，O型血，ISFP，死者亲侄女，唯一法定继承人",
+        "characterId": "0ce10c2b-cd2b-47df-987d-04d3d05ac9c7",
+        "characterName": "克莱尔·卡文迪许"
+      },
+      {
+        "role": "NPC证人",
+        "basicInfo": "男，O型血，ENFP，临时机械师，负责调试新自动机械装置",
+        "characterId": "d24a81ea-3880-4115-86aa-6dfd8aa79e13",
+        "characterName": "托马斯·贝茨"
+      }
+    ],
+    "roundGuides": [
+      {
+        "round": 1,
+        "content": "玩家自我介绍，梳理初步时间线，搜证公共区域",
+        "duration": 30
+      },
+      {
+        "round": 2,
+        "content": "搜证书房与实验室，讨论密室诡计与作案动机",
+        "duration": 60
+      },
+      {
+        "round": 3,
+        "content": "搜证私人区域，整合所有线索完成最终推理",
+        "duration": 60
+      }
+    ],
+    "truthReveal": "真凶为格蕾丝·黑斯廷斯。作案动机为劳伦斯发现其挪用50英镑公款支付弟弟医药费，威胁将其解雇并报警。作案手法为：1. 以送热可可为由进入书房，用黄铜镇纸击打劳伦斯致死；2. 从实验室取走马鬃线，绑定在自动装置传动杆与书房插销上；3. 利用阿尔弗雷德修改的装置程序，在21:30启动装置拉动细线锁死书房门窗，完成密室伪装。关键证据为书房插销与实验室传动杆的马鬃线痕迹一致，以及格蕾丝收纳袋内的公款账本碎片。",
+    "judgingRules": {
+      "winConditions": "玩家团队成功找出真凶，或真凶成功隐藏身份逃脱",
+      "scoringCriteria": "1. 正确找出真凶得10分；2. 还原全部作案细节得5分；3. 隐藏自身秘密成功得3分；4. 误导其他玩家成功得2分"
+    },
+    "clueDistribution": [
+      {
+        "type": "clue_card",
+        "level": "key",
+        "clueId": "clue001",
+        "content": "书房木门插销上缠绕过纤细马鬃线的痕迹，末端有轻微拉扯断裂的毛边",
+        "associatedCharacterId": "all"
+      },
+      {
+        "type": "clue_card",
+        "level": "key",
+        "clueId": "clue002",
+        "content": "实验室自动装置的传动杆上残留少量马鬃线纤维，与书房插销上的痕迹一致",
+        "associatedCharacterId": "d24a81ea-3880-4115-86aa-6dfd8aa79e13,c6b01875-b605-4738-9775-1259ccb896f3"
+      },
+      {
+        "type": "clue_card",
+        "level": "key",
+        "clueId": "clue003",
+        "content": "格蕾丝的皮质收纳袋内有被撕碎的庄园公款账本碎片，标注有50英镑支出记录与“弟弟医药费”字样",
+        "associatedCharacterId": "db547eed-3bbe-441a-9691-199e0679b9cb"
+      },
+      {
+        "type": "clue_card",
+        "level": "key",
+        "clueId": "clue004",
+        "content": "埃利亚斯的皮质工具袋内发现一小罐未标记的钽金属粉末，与实验室失窃的稀有金属成分一致",
+        "associatedCharacterId": "6da39b81-d33b-48df-94f9-da53bde5c78e"
+      },
+      {
+        "type": "clue_card",
+        "level": "key",
+        "clueId": "clue005",
+        "content": "阿尔弗雷德的皮质笔记本有一页被强行撕掉的痕迹，残留墨水痕迹显示为“电磁传动锁”相关技术笔记",
+        "associatedCharacterId": "c6b01875-b605-4738-9775-1259ccb896f3"
+      },
+      {
+        "type": "clue_card",
+        "level": "key",
+        "clueId": "clue006",
+        "content": "克莱尔的刺绣手袋内发现一份被修改的遗嘱草稿，原捐赠慈善机构的条款被改为将全部财产转移至克莱尔名下",
+        "associatedCharacterId": "0ce10c2b-cd2b-47df-987d-04d3d05ac9c7"
+      },
+      {
+        "type": "clue_card",
+        "level": "key",
+        "clueId": "clue007",
+        "content": "托马斯的大型工具箱内缺失编号为M-7的核心齿轮，与实验室自动装置上的缺失零件完全匹配",
+        "associatedCharacterId": "d24a81ea-3880-4115-86aa-6dfd8aa79e13"
+      },
+      {
+        "type": "clue_card",
+        "level": "auxiliary",
+        "clueId": "clue008",
+        "content": "书房所有门窗均从内部锁死，无撬动痕迹，为标准密室状态",
+        "associatedCharacterId": "all"
+      },
+      {
+        "type": "clue_card",
+        "level": "auxiliary",
+        "clueId": "clue009",
+        "content": "死者死因为头部钝器击打，书房黄铜镇纸上残留白色棉质手套的纤维痕迹",
+        "associatedCharacterId": "db547eed-3bbe-441a-9691-199e0679b9cb"
+      },
+      {
+        "type": "clue_card",
+        "level": "auxiliary",
+        "clueId": "clue010",
+        "content": "餐厅餐桌上残留一杯未喝完的热可可，杯壁上有格蕾丝的指纹",
+        "associatedCharacterId": "db547eed-3bbe-441a-9691-199e0679b9cb"
+      },
+      {
+        "type": "clue_card",
+        "level": "disturb",
+        "clueId": "clue011",
+        "content": "埃利亚斯的袖口带有磨损的银色刺绣袖扣，工具袋内装有精密螺丝刀与镊子",
+        "associatedCharacterId": "6da39b81-d33b-48df-94f9-da53bde5c78e"
+      },
+      {
+        "type": "clue_card",
+        "level": "disturb",
+        "clueId": "clue012",
+        "content": "克莱尔的手袋内装有绘画颜料与素描本，画布上有庄园风景的草稿",
+        "associatedCharacterId": "0ce10c2b-cd2b-47df-987d-04d3d05ac9c7"
+      },
+      {
+        "type": "clue_card",
+        "level": "disturb",
+        "clueId": "clue013",
+        "content": "阿尔弗雷德的深色风衣上沾有少量实验室的机油痕迹",
+        "associatedCharacterId": "c6b01875-b605-4738-9775-1259ccb896f3"
+      },
+      {
+        "type": "clue_card",
+        "level": "disturb",
+        "clueId": "clue014",
+        "content": "托马斯的帆布手套上沾有少量黄铜锈迹，与书房镇纸的材质一致",
+        "associatedCharacterId": "d24a81ea-3880-4115-86aa-6dfd8aa79e13"
+      },
+      {
+        "type": "clue_card",
+        "level": "disturb",
+        "clueId": "clue015",
+        "content": "格蕾丝的折叠雨伞上带有夜间的露水痕迹",
+        "associatedCharacterId": "db547eed-3bbe-441a-9691-199e0679b9cb"
+      }
+    ],
+    "branchDecisionPoints": [
+      {
+        "nodeId": "node001",
+        "trigger": "Act2投票错误",
+        "nextNodes": [
+          "ending001"
+        ],
+        "description": "真凶逃脱，玩家未能找出真凶"
+      },
+      {
+        "nodeId": "node002",
+        "trigger": "Act2投票正确",
+        "nextNodes": [
+          "ending002"
+        ],
+        "description": "真凶被抓获，玩家成功还原案件"
+      }
+    ]
+  },
+  "generationMode": "character_first",
+  "branchStructure": {
+    "edges": [
+      {
+        "to": "node001",
+        "from": "start",
+        "condition": "Act2投票错误率>60%"
+      },
+      {
+        "to": "node002",
+        "from": "start",
+        "condition": "Act2投票错误率<=60%"
+      },
+      {
+        "to": "ending001",
+        "from": "node001"
+      },
+      {
+        "to": "ending002",
+        "from": "node002"
+      }
+    ],
+    "nodes": [
+      {
+        "nodeId": "start",
+        "description": "游戏开始，玩家进入庄园"
+      },
+      {
+        "nodeId": "node001",
+        "description": "Act2投票错误"
+      },
+      {
+        "nodeId": "node002",
+        "description": "Act2投票正确"
+      },
+      {
+        "nodeId": "ending001",
+        "description": "真凶逃脱结局"
+      },
+      {
+        "nodeId": "ending002",
+        "description": "真凶被抓获结局"
+      }
+    ],
+    "endings": [
+      "ending001",
+      "ending002"
+    ]
+  },
+  "playerHandbooks": [
+    {
+      "secrets": [
+        "偷偷挪用了实验室价值20英镑的稀有金属钽用于私人研究",
+        "案发当晚离开实验室后曾偷偷返回庄园查看死者书房"
+      ],
+      "knownClues": [
+        "案发当晚离开实验室后曾返回书房探查",
+        "劳伦斯曾承诺给你启动资金成立工作室",
+        "格蕾丝曾威胁要揭发你的偷窃行为"
+      ],
+      "characterId": "6da39b81-d33b-48df-94f9-da53bde5c78e",
+      "primaryGoal": "洗清自身嫌疑，保住工作与晋升机会，同时掩盖挪用稀有金属的事实",
+      "roundActions": [
+        "第一幕：隐藏工具袋内的钽金属粉末",
+        "第二幕：检查实验室装置的传动痕迹",
+        "第三幕：核对实验室零件的出入记录"
+      ],
+      "characterName": "埃利亚斯·索恩",
+      "relationships": [
+        {
+          "target": "格蕾丝·黑斯廷斯",
+          "relation": "竞争对手",
+          "description": "她知晓你挪用公款的事，曾诬陷你偷窃实验室物资"
+        },
+        {
+          "target": "阿尔弗雷德·芬奇",
+          "relation": "竞争对手",
+          "description": "他窃取了你的专利技术，两人曾在实验室激烈争吵"
+        },
+        {
+          "target": "克莱尔·卡文迪许",
+          "relation": "同事",
+          "description": "曾帮她修理绘画工具，她对你较为信任"
+        },
+        {
+          "target": "托马斯·贝茨",
+          "relation": "盟友",
+          "description": "与你一同调试装置，告知你装置存在安全隐患"
+        }
+      ],
+      "secondaryGoals": [
+        "找出真凶避免成为替罪羊",
+        "确认劳伦斯是否掌握自己挪用金属的证据"
+      ],
+      "backgroundStory": "你是死者劳伦斯·卡文迪许的首席技术助手，跟随他工作已满五年，负责打理庄园内的机械实验室与日常科研事务。案发前一天刚从伦敦采购完稀有精密零件返回庄园，当晚在实验室加班到深夜，离开时确认所有门窗锁好。"
+    },
+    {
+      "secrets": [
+        "偷偷挪用了庄园公款50英镑支付弟弟的住院费用",
+        "案发当晚离开书房后曾偷偷返回书房寻找挪用公款的账本"
+      ],
+      "knownClues": [
+        "劳伦斯发现了你挪用公款的事并威胁报警",
+        "案发当晚离开书房后曾返回寻找被藏起的账本",
+        "书房内的热可可杯上留有你的指纹"
+      ],
+      "characterId": "db547eed-3bbe-441a-9691-199e0679b9cb",
+      "primaryGoal": "掩盖挪用公款的事实，保住庄园管家的工作，销毁劳伦斯掌握的证据",
+      "roundActions": [
+        "第一幕：隐藏收纳袋内的账本碎片",
+        "第二幕：销毁书房内的公款证据",
+        "第三幕：误导玩家指向其他嫌疑人"
+      ],
+      "characterName": "格蕾丝·黑斯廷斯",
+      "relationships": [
+        {
+          "target": "埃利亚斯·索恩",
+          "relation": "竞争对手",
+          "description": "他知晓你挪用公款的事，曾威胁要告知雇主"
+        },
+        {
+          "target": "克莱尔·卡文迪许",
+          "relation": "盟友",
+          "description": "照顾克莱尔，帮她处理社交麻烦，知晓她修改遗嘱的秘密"
+        },
+        {
+          "target": "阿尔弗雷德·芬奇",
+          "relation": "陌生人",
+          "description": "首次见面的客人，对机械装置感兴趣"
+        },
+        {
+          "target": "托马斯·贝茨",
+          "relation": "陌生人",
+          "description": "临时机械师，看起来粗心大意"
+        }
+      ],
+      "secondaryGoals": [
+        "洗清自身杀人嫌疑",
+        "避免弟弟的医药费来源被曝光"
+      ],
+      "backgroundStory": "你是死者劳伦斯·卡文迪许雇佣的庄园管家，已工作三年，负责打理庄园日常运转与社交接待。案发当晚最后一个离开死者书房，离开前曾送过一杯热可可。"
+    },
+    {
+      "secrets": [
+        "通过贿赂死者助手窃取了三年前提交的未公开专利",
+        "案发当晚曾偷偷进入实验室修改新机械装置的程序"
+      ],
+      "knownClues": [
+        "你通过贿赂死者助手窃取了专利技术",
+        "案发当晚曾进入实验室修改装置程序",
+        "埃利亚斯曾在实验室与你发生争吵"
+      ],
+      "characterId": "c6b01875-b605-4738-9775-1259ccb896f3",
+      "primaryGoal": "证明自己不是凶手，找出装置的技术漏洞，避免商业利益受损",
+      "roundActions": [
+        "第一幕：隐藏被撕掉的笔记本",
+        "第二幕：检查装置的修改痕迹",
+        "第三幕：误导玩家指向托马斯"
+      ],
+      "characterName": "阿尔弗雷德·芬奇",
+      "relationships": [
+        {
+          "target": "埃利亚斯·索恩",
+          "relation": "竞争对手",
+          "description": "他发现了你窃取专利的事实，曾威胁揭穿你的真面目"
+        },
+        {
+          "target": "托马斯·贝茨",
+          "relation": "盟友",
+          "description": "与你讨论过装置运行原理，知晓装置存在安全隐患"
+        },
+        {
+          "target": "格蕾丝·黑斯廷斯",
+          "relation": "陌生人",
+          "description": "庄园管家，负责接待你"
+        },
+        {
+          "target": "克莱尔·卡文迪许",
+          "relation": "陌生人",
+          "description": "死者侄女，对机械装置不感兴趣"
+        }
+      ],
+      "secondaryGoals": [
+        "销毁自己窃取专利的证据",
+        "拿回属于自己的专利技术"
+      ],
+      "backgroundStory": "你是知名电气工程师，受邀来到庄园参加新自动机械装置发布会，与死者是学术竞争对手。案发前一天抵达庄园，当晚曾在实验室附近徘徊。"
+    },
+    {
+      "secrets": [
+        "偷偷修改了叔叔的遗嘱草稿将财产转到自己名下",
+        "案发当晚曾在书房外偷听他与他人的谈话"
+      ],
+      "knownClues": [
+        "你偷偷修改了叔叔的遗嘱草稿",
+        "案发当晚曾在书房外偷听谈话",
+        "装置运行时会排放有毒废气"
+      ],
+      "characterId": "0ce10c2b-cd2b-47df-987d-04d3d05ac9c7",
+      "primaryGoal": "证明自己没有杀害叔叔，保住继承权",
+      "roundActions": [
+        "第一幕：隐藏手袋内的遗嘱草稿",
+        "第二幕：检查装置的废气排放口",
+        "第三幕：误导玩家指向阿尔弗雷德"
+      ],
+      "characterName": "克莱尔·卡文迪许",
+      "relationships": [
+        {
+          "target": "埃利亚斯·索恩",
+          "relation": "同事",
+          "description": "曾请他修理绘画工具，他对你友好且信任"
+        },
+        {
+          "target": "格蕾丝·黑斯廷斯",
+          "relation": "盟友",
+          "description": "依赖格蕾丝的照顾，知晓她挪用公款的秘密并答应保密"
+        },
+        {
+          "target": "阿尔弗雷德·芬奇",
+          "relation": "陌生人",
+          "description": "首次见面的客人，对机械装置感兴趣"
+        },
+        {
+          "target": "托马斯·贝茨",
+          "relation": "陌生人",
+          "description": "临时机械师，看起来紧张不安"
+        }
+      ],
+      "secondaryGoals": [
+        "阻止新机械装置公开",
+        "掩盖自己修改遗嘱草稿的事实"
+      ],
+      "backgroundStory": "你是死者劳伦斯·卡文迪许的亲侄女，唯一法定继承人，案发前一周来到庄园看望叔叔，发现他正在修改遗嘱将财产捐给慈善机构，继承权受到威胁。"
+    }
+  ],
+  "characterProfiles": [
+    {
+      "gender": "male",
+      "secrets": [
+        "偷偷挪用了实验室价值约20英镑的稀有金属钽，用于制作自己的私人机械发明",
+        "案发当晚离开实验室后，曾偷偷返回庄园查看死者的书房，因为你发现死者掌握了你挪用金属的证据"
+      ],
+      "mbtiType": "ISTJ",
+      "bloodType": "A",
+      "appearance": "身高约178厘米，浅棕色短发梳理得极为整齐，没有一丝凌乱，鼻梁高挺，下颌线清晰，常年佩戴一副玳瑁框圆形眼镜，镜片后的眼神锐利且专注。日常穿着深灰色定制羊毛西装套装，内搭硬领白色衬衫，系着藏青色丝质领带，西装袖口带有磨损的银色刺绣袖扣，下身是同色系西装裤，脚上穿着擦得发亮的牛皮牛津鞋，左手手腕佩戴一条老式黄铜怀表链，腰间挂着一个小型皮质工具袋，里面装着精密的螺丝刀和镊子",
+      "zodiacSign": "virgo",
+      "characterId": "6da39b81-d33b-48df-94f9-da53bde5c78e",
+      "personality": "严谨守序，注重细节，有极强的规则感，不善言辞但执行力极强，习惯按流程做事，对偏差零容忍，对待事物有极高的专业标准",
+      "characterName": "埃利亚斯·索恩",
+      "characterType": "player",
+      "narrativeRole": "suspect",
+      "relationships": [
+        {
+          "description": "你知道她偷偷挪用了庄园的公款，曾多次提醒她收手，但她不仅不听，还反过来诬陷你在实验室里偷东西",
+          "relationshipType": "rival",
+          "targetCharacterId": "db547eed-3bbe-441a-9691-199e0679b9cb",
+          "targetCharacterName": "格蕾丝·黑斯廷斯"
+        },
+        {
+          "description": "你发现他的新机械装置核心技术与你帮助死者开发的项目完全一致，怀疑他窃取了死者的科研成果，两人曾在实验室发生过激烈争吵",
+          "relationshipType": "rival",
+          "targetCharacterId": "c6b01875-b605-4738-9775-1259ccb896f3",
+          "targetCharacterName": "阿尔弗雷德·芬奇"
+        },
+        {
+          "description": "你曾帮她修理过她带来的小型绘画工具，她对你比较信任，偶尔会和你谈论她对遗嘱的不满",
+          "relationshipType": "colleague",
+          "targetCharacterId": "0ce10c2b-cd2b-47df-987d-04d3d05ac9c7",
+          "targetCharacterName": "克莱尔·卡文迪许"
+        },
+        {
+          "description": "你和他都是懂机械的人，案发前曾一起调试过死者的新自动机械装置，他告诉你这个装置存在一些安全隐患",
+          "relationshipType": "ally",
+          "targetCharacterId": "d24a81ea-3880-4115-86aa-6dfd8aa79e13",
+          "targetCharacterName": "托马斯·贝茨"
+        }
+      ],
+      "specialTraits": [
+        "过目不忘的细节记忆力",
+        "精通维多利亚时代精密机械的维护与调试",
+        "严格遵循既定流程完成所有任务"
+      ],
+      "backgroundStory": "你是死者劳伦斯·卡文迪许的首席技术助手，跟随他工作已满五年，负责打理庄园内的机械实验室与日常科研事务。案发前一天你刚从伦敦采购完一批稀有精密零件返回庄园，当晚曾在实验室加班到深夜，最后离开时确认了所有门窗都已锁好",
+      "primaryMotivation": "表层动机：证明自己没有失职，洗清被怀疑的嫌疑，避免失去目前的工作与即将到手的晋升机会；深层动机：死者生前答应给你一笔启动资金，让你成立自己的机械工作室，你不想因为这次案件失去这个改变人生的机会，同时你需要掩盖自己偷偷挪用了实验室少量稀有金属用于私人研究的事实",
+      "secondaryMotivations": [
+        "避免自己挪用稀有金属的事情被曝光",
+        "找出真正的凶手，避免自己被当成替罪羊"
+      ]
+    },
+    {
+      "gender": "female",
+      "secrets": [
+        "偷偷挪用了庄园的公款50英镑给住院的弟弟支付医药费",
+        "案发当晚离开书房后，曾偷偷返回书房寻找被你藏起来的挪用公款的账本"
+      ],
+      "mbtiType": "ESFP",
+      "bloodType": "B",
+      "appearance": "身高约165厘米，深棕色波浪长发被挽成低发髻，留有细碎的空气刘海，脸颊带有淡淡的雀斑，嘴唇常涂着珊瑚色口红，眼神灵动且富有感染力。日常穿着剪裁合身的深蓝色棉质连衣裙，领口带有白色蕾丝花边，外搭一件驼色羊毛开衫，腰间系着带有精致刺绣的皮质系带，手上佩戴一对小巧的珍珠耳钉，脚上穿着擦得干净的黑色绒面低跟皮鞋，随身携带着一个小型皮质收纳袋和一把折叠雨伞，手上经常戴着一副白色棉质手套",
+      "zodiacSign": "taurus",
+      "characterId": "db547eed-3bbe-441a-9691-199e0679b9cb",
+      "personality": "热情开朗，善于察言观色，注重实际利益，拥有极强的社交天赋，喜欢照顾身边的人，但偶尔会因为急于达成目的而忽略细节，有点小虚荣，对新鲜事物充满好奇心但缺乏耐心",
+      "characterName": "格蕾丝·黑斯廷斯",
+      "characterType": "player",
+      "narrativeRole": "suspect",
+      "relationships": [
+        {
+          "description": "你知道他发现了你挪用公款的事，曾威胁要告诉你的雇主，两人因此关系紧张，互相猜忌",
+          "relationshipType": "rival",
+          "targetCharacterId": "6da39b81-d33b-48df-94f9-da53bde5c78e",
+          "targetCharacterName": "埃利亚斯·索恩"
+        },
+        {
+          "description": "你是第一次见到他，他是死者邀请来的客人，看起来对死者的新机械装置非常感兴趣",
+          "relationshipType": "stranger",
+          "targetCharacterId": "c6b01875-b605-4738-9775-1259ccb896f3",
+          "targetCharacterName": "阿尔弗雷德·芬奇"
+        },
+        {
+          "description": "你很照顾克莱尔，因为她是死者的侄女，经常帮她处理一些社交上的麻烦，她也对你很信任",
+          "relationshipType": "ally",
+          "targetCharacterId": "0ce10c2b-cd2b-47df-987d-04d3d05ac9c7",
+          "targetCharacterName": "克莱尔·卡文迪许"
+        },
+        {
+          "description": "你是今天才见到他的，他是死者雇来的临时机械师，看起来有点粗心大意",
+          "relationshipType": "stranger",
+          "targetCharacterId": "d24a81ea-3880-4115-86aa-6dfd8aa79e13",
+          "targetCharacterName": "托马斯·贝茨"
+        }
+      ],
+      "specialTraits": [
+        "擅长快速识别他人的情绪变化",
+        "精通维多利亚时代的家政管理与社交礼仪",
+        "能在短时间内记住复杂的社交关系网络"
+      ],
+      "backgroundStory": "你是死者劳伦斯·卡文迪许雇佣的庄园管家，已经在庄园工作了三年，负责打理庄园的日常运转与社交接待。案发当晚你最后一个离开死者的书房，离开前曾给死者送过一杯热可可",
+      "primaryMotivation": "表层动机：证明自己没有杀害雇主，保住自己在庄园的工作；深层动机：死者发现你偷偷挪用了庄园的公款约50英镑，用于支付你弟弟在伦敦的住院费用，他威胁要解雇你并报警，你需要掩盖这件事并销毁他掌握的证据",
+      "secondaryMotivations": [
+        "避免自己弟弟的住院费用来源被曝光",
+        "保住自己在庄园的工作"
+      ]
+    },
+    {
+      "gender": "male",
+      "secrets": [
+        "你通过贿赂死者的助手，窃取了你的专利技术，并将其伪装成死者自己的发明",
+        "案发当晚你曾偷偷进入死者的实验室，修改了新机械装置的程序，试图让它在启动时出现故障"
+      ],
+      "mbtiType": "INTJ",
+      "bloodType": "AB",
+      "appearance": "身高约183厘米，黑色短发梳理得极为整齐，留着一小撮修剪整齐的络腮胡，眼神深邃锐利，鼻梁高挺，下颌线清晰。日常穿着黑色高领羊毛衫，外搭一件深色长款羊毛风衣，戴着黑色皮质手套，手上经常拿着一个皮质笔记本和一支钢笔，下身是深色西装裤和黑色皮靴，腰间挂着一个小型的金属工具包，里面装着精密的测量仪器",
+      "zodiacSign": "scorpio",
+      "characterId": "c6b01875-b605-4738-9775-1259ccb896f3",
+      "personality": "冷静理智，善于逻辑推理，拥有极强的掌控欲，不擅长表达情感，对任何事物都有强烈的好奇心，喜欢钻研复杂的技术问题，有点偏执和多疑",
+      "characterName": "阿尔弗雷德·芬奇",
+      "characterType": "player",
+      "narrativeRole": "suspect",
+      "relationships": [
+        {
+          "description": "你知道他是死者的首席助手，可能发现了你窃取专利的事实，两人曾在实验室发生过激烈的争吵，他曾威胁要揭穿你的真面目",
+          "relationshipType": "rival",
+          "targetCharacterId": "6da39b81-d33b-48df-94f9-da53bde5c78e",
+          "targetCharacterName": "埃利亚斯·索恩"
+        },
+        {
+          "description": "你对她没有太多印象，她只是庄园的管家，负责接待你",
+          "relationshipType": "stranger",
+          "targetCharacterId": "db547eed-3bbe-441a-9691-199e0679b9cb",
+          "targetCharacterName": "格蕾丝·黑斯廷斯"
+        },
+        {
+          "description": "你是第一次见到她，她是死者的侄女，看起来对机械装置不太感兴趣",
+          "relationshipType": "stranger",
+          "targetCharacterId": "0ce10c2b-cd2b-47df-987d-04d3d05ac9c7",
+          "targetCharacterName": "克莱尔·卡文迪许"
+        },
+        {
+          "description": "你和他讨论过新机械装置的运行原理，他告诉你这个装置存在一些安全隐患，你觉得他可能知道一些关于装置的秘密",
+          "relationshipType": "ally",
+          "targetCharacterId": "d24a81ea-3880-4115-86aa-6dfd8aa79e13",
+          "targetCharacterName": "托马斯·贝茨"
+        }
+      ],
+      "specialTraits": [
+        "擅长逻辑推理与逻辑漏洞分析",
+        "精通维多利亚时代的电学与电磁工程",
+        "能快速拆解并复原复杂的机械装置"
+      ],
+      "backgroundStory": "你是知名的电气工程师，受邀来到死者劳伦斯·卡文迪许的庄园，参加他的新自动机械装置发布会。你和死者是同行，此前曾有过学术上的竞争，案发前一天你刚到达庄园，当晚曾在实验室附近徘徊",
+      "primaryMotivation": "表层动机：证明自己不是凶手，同时找出死者新机械装置的技术漏洞，避免自己的商业利益受到损害；深层动机：死者的新机械装置核心技术窃取自你三年前提交的未公开专利，你这次来庄园就是为了讨回公道，同时销毁你窃取专利的证据",
+      "secondaryMotivations": [
+        "避免自己窃取专利的事情被曝光",
+        "拿回属于自己的专利技术"
+      ]
+    },
+    {
+      "gender": "female",
+      "secrets": [
+        "你偷偷修改了叔叔的遗嘱草稿，将大部分财产转到了自己名下，但被叔叔发现了，他威胁要取消你的继承权",
+        "案发当晚你曾在叔叔的书房外偷听他和别人的谈话，得知了他修改遗嘱的计划"
+      ],
+      "mbtiType": "ISFP",
+      "bloodType": "O",
+      "appearance": "身高约162厘米，浅金色长发编成两条麻花辫，发梢带有自然的卷曲，皮肤白皙，眼睛是淡蓝色的，眼神柔和且富有灵气。日常穿着淡紫色棉质连衣裙，领口带有荷叶边装饰，外搭一件白色针织开衫，手上佩戴一枚银质雏菊戒指，脚上穿着白色丝袜和棕色绒面低跟皮鞋，随身携带着一个刺绣花卉图案的皮质手袋，里面装着绘画工具和笔记本",
+      "zodiacSign": "pisces",
+      "characterId": "0ce10c2b-cd2b-47df-987d-04d3d05ac9c7",
+      "personality": "温柔敏感，富有创造力，善于观察细节，有点多愁善感，不擅长与人发生冲突，喜欢艺术与自然，对身边的人有很强的同情心",
+      "characterName": "克莱尔·卡文迪许",
+      "characterType": "player",
+      "narrativeRole": "suspect",
+      "relationships": [
+        {
+          "description": "你曾请他帮你修理过绘画用的小型机械工具，他对你比较友好，你也很信任他",
+          "relationshipType": "colleague",
+          "targetCharacterId": "6da39b81-d33b-48df-94f9-da53bde5c78e",
+          "targetCharacterName": "埃利亚斯·索恩"
+        },
+        {
+          "description": "你很依赖格蕾丝，她经常帮你处理一些社交上的麻烦，你也知道她挪用公款的事，答应帮她保密",
+          "relationshipType": "ally",
+          "targetCharacterId": "db547eed-3bbe-441a-9691-199e0679b9cb",
+          "targetCharacterName": "格蕾丝·黑斯廷斯"
+        },
+        {
+          "description": "你是第一次见到他，他是叔叔邀请来的客人，看起来对叔叔的新机械装置非常感兴趣",
+          "relationshipType": "stranger",
+          "targetCharacterId": "c6b01875-b605-4738-9775-1259ccb896f3",
+          "targetCharacterName": "阿尔弗雷德·芬奇"
+        },
+        {
+          "description": "你是今天才见到他的，他是叔叔雇来的临时机械师，看起来有点紧张",
+          "relationshipType": "stranger",
+          "targetCharacterId": "d24a81ea-3880-4115-86aa-6dfd8aa79e13",
+          "targetCharacterName": "托马斯·贝茨"
+        }
+      ],
+      "specialTraits": [
+        "擅长观察细微的视觉细节",
+        "精通维多利亚时代的绘画与雕塑艺术",
+        "能快速感知周围环境的异常氛围"
+      ],
+      "backgroundStory": "你是死者劳伦斯·卡文迪许的亲侄女，也是他唯一的法定继承人，案发前一周你来到庄园看望叔叔，最近你发现叔叔正在修改遗嘱，似乎要将大部分财产捐给慈善机构，你的继承权受到了严重威胁",
+      "primaryMotivation": "表层动机：证明自己没有杀害叔叔，保住自己的继承权；深层动机：你发现叔叔的新机械装置会在运行时排放有毒的废气，会破坏当地的生态环境，你需要阻止装置被公开，同时掩盖你偷偷修改了遗嘱草稿的事实",
+      "secondaryMotivations": [
+        "避免自己修改遗嘱的事情被曝光",
+        "阻止新机械装置被公开"
+      ]
+    },
+    {
+      "gender": "male",
+      "secrets": [
+        "偷偷拿走了新机械装置上的一个核心齿轮，用来偿还部分高利贷",
+        "你曾试图警告死者装置存在安全隐患，但他不仅不听，还威胁要解雇你"
+      ],
+      "mbtiType": "ENFP",
+      "bloodType": "O",
+      "appearance": "身高约175厘米，棕色短发，脸上带有不少雀斑，眼神明亮且充满活力，笑容憨厚。日常穿着浅蓝色棉质工装衬衫，外搭一件棕色帆布马甲，下身是卡其色工装裤，裤脚塞在靴子里，脚上穿着破旧的牛皮工装靴，手上戴着帆布手套，腰间挂着一个大型金属工具箱，里面装着各种机械维修工具",
+      "zodiacSign": "sagittarius",
+      "characterId": "d24a81ea-3880-4115-86aa-6dfd8aa79e13",
+      "personality": "乐观开朗，善于社交，喜欢冒险和探索新鲜事物，有点粗心大意，对机械技术充满热情，喜欢和别人分享自己的知识",
+      "characterName": "托马斯·贝茨",
+      "characterType": "npc",
+      "narrativeRole": "witness",
+      "relationships": [
+        {
+          "description": "你和他都是懂机械的人，案发前曾一起调试过装置，他告诉你装置的一些技术细节，你也和他分享了自己的维修经验",
+          "relationshipType": "ally",
+          "targetCharacterId": "6da39b81-d33b-48df-94f9-da53bde5c78e",
+          "targetCharacterName": "埃利亚斯·索恩"
+        },
+        {
+          "description": "你是第一次见到她，她是庄园的管家，负责接待你",
+          "relationshipType": "stranger",
+          "targetCharacterId": "db547eed-3bbe-441a-9691-199e0679b9cb",
+          "targetCharacterName": "格蕾丝·黑斯廷斯"
+        },
+        {
+          "description": "你和他讨论过装置的运行原理，他指出了装置的一些漏洞，你觉得他是个很有才华的工程师",
+          "relationshipType": "ally",
+          "targetCharacterId": "c6b01875-b605-4738-9775-1259ccb896f3",
+          "targetCharacterName": "阿尔弗雷德·芬奇"
+        },
+        {
+          "description": "你是第一次见到她，她是死者的侄女，看起来对机械不太感兴趣",
+          "relationshipType": "stranger",
+          "targetCharacterId": "0ce10c2b-cd2b-47df-987d-04d3d05ac9c7",
+          "targetCharacterName": "克莱尔·卡文迪许"
+        }
+      ],
+      "specialTraits": [
+        "精通维多利亚时代的机械维修与安装调试",
+        "能快速记住复杂机械装置的运行原理",
+        "擅长用简单易懂的语言解释复杂的机械结构"
+      ],
+      "backgroundStory": "你是死者劳伦斯·卡文迪许雇来的临时机械师，负责安装和调试他的新自动机械装置，案发当天早上刚抵达庄园，案发前你一直在实验室调试装置，最后离开时曾和死者有过争执",
+      "primaryMotivation": "表层动机：证明自己没有杀害雇主，因为你是最后一个接触装置的人，避免被当成凶手；深层动机：你欠了伦敦高利贷者约100英镑，死者答应给你一笔50英镑的预付款帮你还债，但你发现他的新机械装置存在致命的安全隐患，一旦启动就会发生爆炸，你需要阻止装置被公开，同时掩盖你偷偷拿走了装置上的一个核心齿轮的事实",
+      "secondaryMotivations": [
+        "尽快拿到剩下的报酬偿还高利贷",
+        "避免自己偷拿齿轮的事情被发现"
+      ]
+    }
+  ],
+  "playableStructure": {
+    "acts": [
+      {
+        "vote": {
+          "options": [
             {
-                "to": "act1_vote",
-                "from": "start",
-                "condition": "\u5b8c\u6210\u5e8f\u5e55\u89d2\u8272\u4ecb\u7ecd"
+              "id": "sus001",
+              "text": "埃利亚斯·索恩",
+              "impact": "增加他的嫌疑值"
             },
             {
-                "to": "act2_vote",
-                "from": "act1_vote",
-                "condition": "\u5b8c\u6210\u7b2c\u4e00\u5e55\u641c\u8bc1\u4e0e\u8ba8\u8bba"
+              "id": "sus002",
+              "text": "格蕾丝·黑斯廷斯",
+              "impact": "增加她的嫌疑值"
             },
             {
-                "to": "final_vote",
-                "from": "act2_vote",
-                "condition": "\u5b8c\u6210\u7b2c\u4e8c\u5e55\u641c\u8bc1\u4e0e\u8ba8\u8bba"
+              "id": "sus003",
+              "text": "阿尔弗雷德·芬奇",
+              "impact": "增加他的嫌疑值"
             },
             {
-                "to": "true_end",
-                "from": "final_vote",
-                "condition": "\u6b63\u786e\u6307\u8ba4\u771f\u51f6\u5e76\u7834\u89e3\u5bc6\u5ba4"
+              "id": "sus004",
+              "text": "克莱尔·卡文迪许",
+              "impact": "增加她的嫌疑值"
             },
             {
-                "to": "false_end",
-                "from": "final_vote",
-                "condition": "\u6307\u8ba4\u771f\u51f6\u9519\u8bef\u4e14\u672a\u7834\u89e3\u5bc6\u5ba4"
-            },
-            {
-                "to": "misjudge_end",
-                "from": "final_vote",
-                "condition": "\u6b63\u786e\u7834\u89e3\u5bc6\u5ba4\u4f46\u6307\u8ba4\u9519\u8bef"
+              "id": "sus005",
+              "text": "托马斯·贝茨",
+              "impact": "增加他的嫌疑值"
             }
+          ],
+          "question": "请指认你认为最可疑的嫌疑人"
+        },
+        "title": "雾中初遇",
+        "clueIds": [
+          "clue008",
+          "clue010",
+          "clue015"
         ],
-        "nodes": [
-            "start",
-            "act1_vote",
-            "act2_vote",
-            "final_vote",
-            "true_end",
-            "false_end",
-            "misjudge_end"
-        ],
-        "endings": [
-            "true_end",
-            "false_end",
-            "misjudge_end"
+        "actIndex": 1,
+        "narrative": "DM朗读：众人在庄园主客厅集合，格蕾丝告知大家劳伦斯死于封闭的书房，警方尚未抵达，需要大家配合调查。玩家需完成自我介绍，梳理初步时间线，搜证公共区域（餐厅、主走廊、庄园入口）。",
+        "discussion": {
+          "topics": [
+            "案发当晚每个人的行动轨迹",
+            "谁最后接触过劳伦斯",
+            "书房的密室状态"
+          ],
+          "guidingQuestions": [
+            "你最后一次见到劳伦斯是什么时候？",
+            "你是否注意到其他人的异常行为？"
+          ],
+          "suggestedMinutes": 30
+        },
+        "objectives": [
+          "梳理全员到达时间与行动轨迹",
+          "找出初步可疑人员",
+          "隐藏自身秘密"
         ]
+      },
+      {
+        "vote": {
+          "options": [
+            {
+              "id": "kill001",
+              "text": "埃利亚斯·索恩",
+              "impact": "若为错误投票，进入逃脱结局"
+            },
+            {
+              "id": "kill002",
+              "text": "格蕾丝·黑斯廷斯",
+              "impact": "若为正确投票，进入真相结局"
+            },
+            {
+              "id": "kill003",
+              "text": "阿尔弗雷德·芬奇",
+              "impact": "错误投票"
+            },
+            {
+              "id": "kill004",
+              "text": "克莱尔·卡文迪许",
+              "impact": "错误投票"
+            },
+            {
+              "id": "kill005",
+              "text": "托马斯·贝茨",
+              "impact": "错误投票"
+            }
+          ],
+          "question": "请指认你认为的凶手"
+        },
+        "title": "密室与线索",
+        "clueIds": [
+          "clue001",
+          "clue002",
+          "clue003",
+          "clue004",
+          "clue005",
+          "clue006",
+          "clue007",
+          "clue009"
+        ],
+        "actIndex": 2,
+        "narrative": "DM朗读：警方抵达前，玩家可进入书房与实验室搜证，发现更多与密室相关的线索。需重点分析书房的密室构造、死者死因与装置的异常痕迹。",
+        "discussion": {
+          "topics": [
+            "密室的构造方法",
+            "每个嫌疑人的作案动机",
+            "装置的异常修改痕迹"
+          ],
+          "guidingQuestions": [
+            "书房的插销上的痕迹是怎么来的？",
+            "谁有能力修改机械装置的程序？"
+          ],
+          "suggestedMinutes": 40
+        },
+        "objectives": [
+          "破解密室诡计",
+          "找出作案工具",
+          "验证时间线矛盾"
+        ]
+      },
+      {
+        "vote": {
+          "options": [
+            {
+              "id": "final001",
+              "text": "埃利亚斯·索恩",
+              "impact": "错误投票"
+            },
+            {
+              "id": "final002",
+              "text": "格蕾丝·黑斯廷斯",
+              "impact": "正确投票"
+            },
+            {
+              "id": "final003",
+              "text": "阿尔弗雷德·芬奇",
+              "impact": "错误投票"
+            },
+            {
+              "id": "final004",
+              "text": "克莱尔·卡文迪许",
+              "impact": "错误投票"
+            },
+            {
+              "id": "final005",
+              "text": "托马斯·贝茨",
+              "impact": "错误投票"
+            }
+          ],
+          "question": "请进行最终投票指认真凶"
+        },
+        "title": "最终还原",
+        "clueIds": [
+          "clue011",
+          "clue012",
+          "clue013",
+          "clue014"
+        ],
+        "actIndex": 3,
+        "narrative": "DM朗读：警方完成初步勘查，玩家可进入私人区域搜证，补充最后一批线索。需整合所有线索，还原完整作案过程，确认真凶身份。",
+        "discussion": {
+          "topics": [
+            "所有线索的关联逻辑",
+            "真凶的密室伪装手法",
+            "每个嫌疑人的深层动机"
+          ],
+          "guidingQuestions": [
+            "马鬃线的来源是什么？",
+            "谁有足够的时间完成密室伪装？"
+          ],
+          "suggestedMinutes": 50
+        },
+        "objectives": [
+          "整合所有线索形成完整推理链",
+          "确认真凶的作案手法与动机",
+          "隐藏自身秘密"
+        ]
+      }
+    ],
+    "finale": {
+      "endings": [
+        {
+          "name": "雾中逃脱",
+          "endingId": "ending001",
+          "narrative": "真凶格蕾丝成功销毁证据，以意外事故结案，庄园的秘密被永远尘封。所有玩家需隐藏自身秘密，等待下一次机会。",
+          "triggerCondition": "最终投票指认真凶错误率超过60%",
+          "playerEndingSummaries": [
+            {
+              "ending": "你的挪用行为未被曝光，但未能找出真凶，继续担任助手",
+              "characterId": "6da39b81-d33b-48df-94f9-da53bde5c78e"
+            },
+            {
+              "ending": "你成功逃脱法律制裁，继续担任庄园管家",
+              "characterId": "db547eed-3bbe-441a-9691-199e0679b9cb"
+            },
+            {
+              "ending": "你的窃取专利行为未被曝光，但未能找出真凶，离开庄园",
+              "characterId": "c6b01875-b605-4738-9775-1259ccb896f3"
+            },
+            {
+              "ending": "你的修改遗嘱行为未被曝光，但未能找出真凶，保留继承权",
+              "characterId": "0ce10c2b-cd2b-47df-987d-04d3d05ac9c7"
+            }
+          ]
+        },
+        {
+          "name": "机械真相",
+          "endingId": "ending002",
+          "narrative": "真凶格蕾丝被绳之以法，案件真相通过机械线索被完整还原。庄园的秘密被公之于众，所有玩家的秘密也将被逐一揭露。",
+          "triggerCondition": "最终投票准确指认真凶",
+          "playerEndingSummaries": [
+            {
+              "ending": "你的挪用行为被曝光，失去工作与晋升机会",
+              "characterId": "6da39b81-d33b-48df-94f9-da53bde5c78e"
+            },
+            {
+              "ending": "你被判处有期徒刑，失去庄园管家工作与弟弟的医药费来源",
+              "characterId": "db547eed-3bbe-441a-9691-199e0679b9cb"
+            },
+            {
+              "ending": "你的窃取专利行为被曝光，面临法律诉讼与商业损失",
+              "characterId": "c6b01875-b605-4738-9775-1259ccb896f3"
+            },
+            {
+              "ending": "你的修改遗嘱行为被曝光，失去继承权与叔叔的信任",
+              "characterId": "0ce10c2b-cd2b-47df-987d-04d3d05ac9c7"
+            }
+          ]
+        }
+      ],
+      "finalVote": {
+        "options": [
+          {
+            "id": "final001",
+            "text": "埃利亚斯·索恩"
+          },
+          {
+            "id": "final002",
+            "text": "格蕾丝·黑斯廷斯"
+          },
+          {
+            "id": "final003",
+            "text": "阿尔弗雷德·芬奇"
+          },
+          {
+            "id": "final004",
+            "text": "克莱尔·卡文迪许"
+          },
+          {
+            "id": "final005",
+            "text": "托马斯·贝茨"
+          }
+        ],
+        "question": "请进行最终投票指认真凶"
+      },
+      "truthReveal": "真凶为格蕾丝·黑斯廷斯。作案动机为劳伦斯发现其挪用50英镑公款支付弟弟医药费，威胁将其解雇并报警。作案手法为：1. 以送热可可为由进入书房，用黄铜镇纸击打劳伦斯致死；2. 从实验室取走马鬃线，绑定在自动装置传动杆与书房插销上；3. 利用阿尔弗雷德修改的装置程序，在21:30启动装置拉动细线锁死书房门窗，完成密室伪装。关键证据为书房插销与实验室传动杆的马鬃线痕迹一致，以及格蕾丝收纳袋内的公款账本碎片。"
+    },
+    "prologue": {
+      "worldSetting": "维多利亚时代的英国伦敦郊外，富裕发明家的私人庄园，拥有精密机械实验室、古典书房与豪华客房，浓雾天气增加了场景的神秘感与封闭性。",
+      "characterIntros": [
+        {
+          "characterId": "6da39b81-d33b-48df-94f9-da53bde5c78e",
+          "characterName": "埃利亚斯·索恩",
+          "publicDescription": "劳伦斯的首席技术助手，严谨细致的机械专家"
+        },
+        {
+          "characterId": "db547eed-3bbe-441a-9691-199e0679b9cb",
+          "characterName": "格蕾丝·黑斯廷斯",
+          "publicDescription": "庄园管家，热情干练的女主人助手"
+        },
+        {
+          "characterId": "c6b01875-b605-4738-9775-1259ccb896f3",
+          "characterName": "阿尔弗雷德·芬奇",
+          "publicDescription": "知名电气工程师，受邀参加发布会的同行"
+        },
+        {
+          "characterId": "0ce10c2b-cd2b-47df-987d-04d3d05ac9c7",
+          "characterName": "克莱尔·卡文迪许",
+          "publicDescription": "劳伦斯的亲侄女，庄园的继承人之一"
+        },
+        {
+          "characterId": "d24a81ea-3880-4115-86aa-6dfd8aa79e13",
+          "characterName": "托马斯·贝茨",
+          "publicDescription": "临时机械师，负责调试新机械装置"
+        }
+      ],
+      "backgroundNarrative": "1892年10月12日晚，伦敦郊外的卡文迪许庄园笼罩在浓雾中，著名发明家劳伦斯·卡文迪许邀请了各界人士参加他的新自动机械装置发布会。当众人等待发布会开始时，庄园管家格蕾丝·黑斯廷斯突然发出尖叫——劳伦斯的书房从内部锁死，破门后发现他倒在书桌前，已经失去了呼吸。"
+    },
+    "dmHandbook": {
+      "actGuides": [
+        {
+          "actIndex": 1,
+          "keyEventHints": [
+            "提醒玩家隐藏自身秘密",
+            "引导玩家梳理初步时间线"
+          ],
+          "readAloudText": "众人在庄园主客厅集合，格蕾丝告知大家劳伦斯死于封闭的书房，警方尚未抵达，需要大家配合调查。",
+          "dmPrivateNotes": "格蕾丝玩家需隐藏收纳袋内的账本碎片，埃利亚斯玩家需隐藏工具袋内的钽金属粉末",
+          "voteHostingNotes": "记录每个玩家的投票结果，计算嫌疑值",
+          "discussionGuidance": "引导玩家围绕时间线展开讨论，不要过早暴露深层秘密",
+          "clueDistributionInstructions": [
+            {
+              "clueId": "clue008",
+              "condition": "首次搜证书房区域",
+              "targetCharacterId": "all"
+            },
+            {
+              "clueId": "clue010",
+              "condition": "搜证餐厅区域",
+              "targetCharacterId": "db547eed-3bbe-441a-9691-199e0679b9cb"
+            },
+            {
+              "clueId": "clue015",
+              "condition": "搜证管家客房区域",
+              "targetCharacterId": "db547eed-3bbe-441a-9691-199e0679b9cb"
+            }
+          ]
+        },
+        {
+          "actIndex": 2,
+          "keyEventHints": [
+            "提醒玩家注意密室的机械构造",
+            "引导玩家分析装置的修改痕迹"
+          ],
+          "readAloudText": "警方抵达前，玩家可进入书房与实验室搜证，发现更多与密室相关的线索。",
+          "dmPrivateNotes": "提醒真凶玩家隐藏关键证据，引导其他玩家推理密室构造",
+          "voteHostingNotes": "记录每个玩家的投票结果，计算最终嫌疑值",
+          "discussionGuidance": "引导玩家围绕密室诡计与作案动机展开讨论，注意时间线的矛盾点",
+          "clueDistributionInstructions": [
+            {
+              "clueId": "clue001",
+              "condition": "搜证书房木门",
+              "targetCharacterId": "all"
+            },
+            {
+              "clueId": "clue002",
+              "condition": "搜证实验室装置",
+              "targetCharacterId": "all"
+            },
+            {
+              "clueId": "clue003",
+              "condition": "搜证管家收纳袋",
+              "targetCharacterId": "db547eed-3bbe-441a-9691-199e0679b9cb"
+            },
+            {
+              "clueId": "clue004",
+              "condition": "搜证埃利亚斯工具袋",
+              "targetCharacterId": "6da39b81-d33b-48df-94f9-da53bde5c78e"
+            },
+            {
+              "clueId": "clue005",
+              "condition": "搜证阿尔弗雷德笔记本",
+              "targetCharacterId": "c6b01875-b605-4738-9775-1259ccb896f3"
+            },
+            {
+              "clueId": "clue006",
+              "condition": "搜证克莱尔手袋",
+              "targetCharacterId": "0ce10c2b-cd2b-47df-987d-04d3d05ac9c7"
+            },
+            {
+              "clueId": "clue007",
+              "condition": "搜证托马斯工具箱",
+              "targetCharacterId": "d24a81ea-3880-4115-86aa-6dfd8aa79e13"
+            },
+            {
+              "clueId": "clue009",
+              "condition": "搜证死者尸体与镇纸",
+              "targetCharacterId": "all"
+            }
+          ]
+        },
+        {
+          "actIndex": 3,
+          "keyEventHints": [
+            "提醒玩家整合所有线索",
+            "引导玩家还原完整作案过程"
+          ],
+          "readAloudText": "警方完成初步勘查，玩家可进入私人区域搜证，补充最后一批线索。",
+          "dmPrivateNotes": "准备最终真相揭示内容，根据投票结果选择对应的结局",
+          "voteHostingNotes": "进行最终投票，公布投票结果",
+          "discussionGuidance": "引导玩家将所有线索串联起来，还原完整的作案手法与动机",
+          "clueDistributionInstructions": [
+            {
+              "clueId": "clue011",
+              "condition": "搜证埃利亚斯客房",
+              "targetCharacterId": "6da39b81-d33b-48df-94f9-da53bde5c78e"
+            },
+            {
+              "clueId": "clue012",
+              "condition": "搜证克莱尔客房",
+              "targetCharacterId": "0ce10c2b-cd2b-47df-987d-04d3d05ac9c7"
+            },
+            {
+              "clueId": "clue013",
+              "condition": "搜证阿尔弗雷德客房",
+              "targetCharacterId": "c6b01875-b605-4738-9775-1259ccb896f3"
+            },
+            {
+              "clueId": "clue014",
+              "condition": "搜证托马斯工具箱",
+              "targetCharacterId": "d24a81ea-3880-4115-86aa-6dfd8aa79e13"
+            }
+          ]
+        }
+      ],
+      "finaleGuide": {
+        "truthRevealScript": "现在我将为大家揭示案件的完整真相：真凶是格蕾丝·黑斯廷斯，作案动机、手法与关键证据如下……",
+        "endingJudgmentNotes": "根据最终投票结果，选择对应的结局，宣读结局内容与玩家个人结局总结。",
+        "finalVoteHostingFlow": "请所有玩家进行最终投票，指认真凶，DM记录投票结果并计算正确率。"
+      },
+      "prologueGuide": {
+        "openingScript": "各位玩家，欢迎来到《雾中卡文迪许庄园的机械密室》剧本杀。现在你们身处1892年的伦敦郊外卡文迪许庄园，浓雾笼罩了整个庄园，刚刚我们得知庄园主人劳伦斯·卡文迪许死于封闭的书房。请大家完成自我介绍，开始今天的推理。",
+        "rulesIntroduction": "游戏共3幕，每幕有搜证、讨论与投票环节，玩家需隐藏自身秘密，找出真凶，游戏结束后根据投票结果与线索还原度进行评分。",
+        "characterAssignmentNotes": "按照玩家人数分配角色，NPC托马斯由DM扮演，全程以证人身份提供线索"
+      }
     },
     "playerHandbooks": [
-        {
-            "secrets": [
-                "\u4f60\u66fe\u8ba1\u5212\u4e3a\u59b9\u59b9\u590d\u4ec7\uff0c\u8d76\u5230\u4e66\u623f\u65f6\u6797\u67ab\u5df2\u6b7b"
+      {
+        "actContents": [
+          {
+            "actIndex": 1,
+            "clueHints": [
+              "注意格蕾丝的收纳袋",
+              "注意实验室的装置痕迹"
             ],
-            "knownClues": [
-                "\u4fa6\u63a2\u8bc1",
-                "\u7b14\u8bb0\u672c\u5185\u7684\u59b9\u59b9\u533b\u7597\u4e8b\u6545\u8bb0\u5f55"
+            "objectives": [
+              "梳理自己的时间线",
+              "隐藏挪用金属的秘密",
+              "找出格蕾丝的破绽"
             ],
-            "characterId": "char01",
-            "primaryGoal": "\u627e\u51fa\u6740\u5bb3\u6797\u67ab\u7684\u771f\u51f6\uff0c\u9690\u85cf\u81ea\u5df1\u7684\u590d\u4ec7\u52a8\u673a",
-            "roundActions": [
-                "\u7b2c\u4e00\u5e55\uff1a\u641c\u8bc1\u4e66\u623f\u3001\u5ba2\u5385",
-                "\u7b2c\u4e8c\u5e55\uff1a\u641c\u8bc1\u81ea\u5df1\u5ba2\u623f\u3001\u82b1\u56ed"
+            "secretInfo": "你偷偷挪用了实验室价值20英镑的稀有金属钽用于私人研究，案发当晚离开实验室后曾偷偷返回庄园查看死者书房",
+            "personalNarrative": "你刚从伦敦采购回来，在餐厅遇到了其他人，随后听到格蕾丝的尖叫，发现劳伦斯死于书房。你需要隐藏自己的工具袋内的钽金属粉末，避免被怀疑。",
+            "discussionSuggestions": [
+              "询问格蕾丝案发当晚的行动",
+              "询问阿尔弗雷德是否进入过实验室"
+            ]
+          },
+          {
+            "actIndex": 2,
+            "clueHints": [
+              "注意实验室的传动杆痕迹",
+              "注意书房的镇纸痕迹"
             ],
-            "characterName": "\u9648\u9ed8",
-            "relationships": [
-                "\u4e0e\u6797\u67ab\u662f\u5927\u5b66\u540c\u5b66\u6709\u65e7\u6028",
-                "\u4e0e\u82cf\u665a\u662f\u5927\u5b66\u540c\u5b66",
-                "\u4e0e\u5f20\u6d69\u662f\u53d1\u5c0f",
-                "\u4e0e\u5218\u742a\u662f\u5b66\u957f\u5b66\u59b9"
+            "objectives": [
+              "破解密室诡计",
+              "找出劳伦斯掌握的证据",
+              "隐藏自身秘密"
             ],
-            "secondaryGoals": [
-                "\u67e5\u660e\u59b9\u59b9\u533b\u7597\u4e8b\u6545\u771f\u76f8",
-                "\u627e\u5230\u6797\u67ab\u632a\u7528\u516c\u6b3e\u7684\u8bc1\u636e"
+            "secretInfo": "你偷偷挪用了实验室价值20英镑的稀有金属钽用于私人研究，案发当晚离开实验室后曾偷偷返回庄园查看死者书房",
+            "personalNarrative": "你进入书房与实验室搜证，发现了插销上的马鬃线痕迹，以及实验室装置的修改痕迹。你需要确认劳伦斯是否掌握你挪用金属的证据，同时隐藏自己的工具袋内的钽金属粉末。",
+            "discussionSuggestions": [
+              "询问阿尔弗雷德是否修改过装置程序",
+              "询问托马斯是否见过马鬃线"
+            ]
+          },
+          {
+            "actIndex": 3,
+            "clueHints": [
+              "注意格蕾丝的收纳袋内的账本碎片",
+              "注意马鬃线的来源"
             ],
-            "backgroundStory": "\u4f60\u662f32\u5c81\u79c1\u5bb6\u4fa6\u63a2\uff0c\u53d7\u6797\u67ab\u5f1f\u5f1f\u6797\u9633\u59d4\u6258\u8c03\u67e5\u6797\u67ab\u632a\u7528\u516c\u6b3e\uff0c\u540c\u65f6\u4f60\u6000\u7591\u5f53\u5e74\u59b9\u59b9\u7684\u533b\u7597\u4e8b\u6545\u4e0e\u6797\u67ab\u6709\u5173\uff0c\u6b64\u6b21\u524d\u6765\u6697\u85cf\u590d\u4ec7\u610f\u56fe\u3002"
-        },
-        {
-            "secrets": [
-                "\u4f60\u77e5\u6653\u6797\u67ab\u632a\u7528\u7236\u4eb2\u624b\u672f\u8d39\uff0c\u4e00\u76f4\u6000\u6068\u5728\u5fc3"
+            "objectives": [
+              "找出真凶",
+              "隐藏自身秘密",
+              "洗清自身嫌疑"
             ],
-            "knownClues": [
-                "\u82b1\u827a\u526a",
-                "\u7236\u4eb2\u7684\u624b\u672f\u8d39\u8d26\u5355"
-            ],
-            "characterId": "char02",
-            "primaryGoal": "\u627e\u51fa\u6740\u5bb3\u6797\u67ab\u7684\u771f\u51f6\uff0c\u9690\u85cf\u632a\u7528\u8bc1\u636e\u590d\u4ec7\u52a8\u673a",
-            "roundActions": [
-                "\u7b2c\u4e00\u5e55\uff1a\u641c\u8bc1\u82b1\u56ed\u3001\u9910\u5385",
-                "\u7b2c\u4e8c\u5e55\uff1a\u641c\u8bc1\u81ea\u5df1\u5ba2\u623f\u3001\u53a8\u623f"
-            ],
-            "characterName": "\u82cf\u665a",
-            "relationships": [
-                "\u4e0e\u6797\u67ab\u662f\u524d\u60c5\u4fa3\u6709\u65e7\u6028",
-                "\u4e0e\u9648\u9ed8\u662f\u5927\u5b66\u540c\u5b66",
-                "\u4e0e\u5f20\u6d69\u662f\u6797\u67ab\u53d1\u5c0f",
-                "\u4e0e\u5218\u742a\u662f\u670b\u53cb"
-            ],
-            "secondaryGoals": [
-                "\u627e\u5230\u6797\u67ab\u632a\u7528\u7236\u4eb2\u624b\u672f\u8d39\u7684\u8bc1\u636e",
-                "\u7d22\u8981\u8d54\u507f"
-            ],
-            "backgroundStory": "\u4f60\u662f30\u5c81\u82b1\u827a\u5e08\uff0c\u66fe\u662f\u6797\u67ab\u524d\u5973\u53cb\uff0c\u5f53\u5e74\u56e0\u8bef\u4f1a\u5206\u624b\u3002\u4f60\u7236\u4eb2\u7684\u624b\u672f\u8d39\u88ab\u6797\u67ab\u632a\u7528\u5bfc\u81f4\u53bb\u4e16\uff0c\u6b64\u6b21\u524d\u6765\u65e2\u662f\u60f3\u590d\u5408\u4e5f\u662f\u4e3a\u4e86\u590d\u4ec7\u3002"
-        },
-        {
-            "secrets": [
-                "\u4f60\u632a\u7528\u4e86\u5f8b\u6240\u5ba2\u6237\u8d44\u91d1\uff0c\u88ab\u6797\u67ab\u6293\u4f4f\u628a\u67c4"
-            ],
-            "knownClues": [
-                "\u5f8b\u5e08\u8bc1",
-                "\u5f8b\u6240\u632a\u7528\u8bc1\u636e\u6587\u4ef6"
-            ],
-            "characterId": "char03",
-            "primaryGoal": "\u9690\u85cf\u632a\u7528\u8bc1\u636e\uff0c\u4e0d\u88ab\u6307\u8ba4\u4e3a\u51f6\u624b",
-            "roundActions": [
-                "\u7b2c\u4e00\u5e55\uff1a\u641c\u8bc1\u8f66\u5e93\u3001\u4e66\u623f\u95e8\u53e3",
-                "\u7b2c\u4e8c\u5e55\uff1a\u641c\u8bc1\u81ea\u5df1\u5ba2\u623f\u3001\u5ba2\u5385"
-            ],
-            "characterName": "\u5f20\u6d69",
-            "relationships": [
-                "\u4e0e\u6797\u67ab\u662f\u53d1\u5c0f\u6709\u5229\u76ca\u51b2\u7a81",
-                "\u4e0e\u9648\u9ed8\u662f\u5927\u5b66\u540c\u5b66",
-                "\u4e0e\u82cf\u665a\u662f\u6797\u67ab\u524d\u53cb",
-                "\u4e0e\u5218\u742a\u662f\u6797\u67ab\u5b66\u59b9"
-            ],
-            "secondaryGoals": [
-                "\u9500\u6bc1\u6797\u67ab\u638c\u63e1\u7684\u8bc1\u636e",
-                "\u6446\u8131\u5a01\u80c1"
-            ],
-            "backgroundStory": "\u4f60\u662f33\u5c81\u5f8b\u5e08\uff0c\u6797\u67ab\u53d1\u5c0f\uff0c\u632a\u7528\u5f8b\u6240\u5ba2\u6237\u8d44\u91d1\u88ab\u6797\u67ab\u638c\u63e1\u8bc1\u636e\uff0c\u4ed6\u5a01\u80c1\u4eca\u665a\u66dd\u5149\uff0c\u4f60\u56e0\u6b64\u8d77\u4e86\u6740\u5fc3\u3002"
-        },
-        {
-            "secrets": [
-                "\u4f60\u77e5\u6653\u6797\u67ab\u6cc4\u9732\u4f60\u7684\u9690\u79c1\uff0c\u4e00\u76f4\u6000\u6068\u5728\u5fc3"
-            ],
-            "knownClues": [
-                "\u62a4\u58eb\u5e3d",
-                "\u624b\u673a\u5185\u7684\u6797\u67ab\u5a01\u80c1\u77ed\u4fe1"
-            ],
-            "characterId": "char04",
-            "primaryGoal": "\u627e\u51fa\u6740\u5bb3\u6797\u67ab\u7684\u771f\u51f6\uff0c\u9690\u85cf\u9690\u79c1\u6cc4\u9732\u590d\u4ec7\u52a8\u673a",
-            "roundActions": [
-                "\u7b2c\u4e00\u5e55\uff1a\u641c\u8bc1\u5ba2\u623f\u3001\u53a8\u623f",
-                "\u7b2c\u4e8c\u5e55\uff1a\u641c\u8bc1\u81ea\u5df1\u5ba2\u623f\u3001\u4e66\u623f"
-            ],
-            "characterName": "\u5218\u742a",
-            "relationships": [
-                "\u4e0e\u6797\u67ab\u662f\u5b66\u957f\u5b66\u59b9\u6709\u65e7\u6028",
-                "\u4e0e\u9648\u9ed8\u662f\u5b66\u957f\u5b66\u59b9",
-                "\u4e0e\u82cf\u665a\u662f\u670b\u53cb",
-                "\u4e0e\u5f20\u6d69\u662f\u6797\u67ab\u53d1\u5c0f"
-            ],
-            "secondaryGoals": [
-                "\u627e\u5230\u6797\u67ab\u6cc4\u9732\u9690\u79c1\u7684\u8bc1\u636e",
-                "\u7d22\u8981\u8d54\u507f"
-            ],
-            "backgroundStory": "\u4f60\u662f29\u5c81\u62a4\u58eb\uff0c\u6797\u67ab\u5b66\u59b9\uff0c\u6797\u67ab\u6cc4\u9732\u4f60\u66fe\u7cbe\u795e\u4e0d\u7a33\u7684\u9690\u79c1\uff0c\u5bfc\u81f4\u4f60\u4e22\u5de5\u4f5c\u3001\u88ab\u9000\u5a5a\uff0c\u6b64\u6b21\u524d\u6765\u6697\u85cf\u62a5\u590d\u610f\u56fe\u3002"
-        }
-    ],
-    "playableStructure": {
-        "acts": [
-            {
-                "vote": {
-                    "options": [
-                        {
-                            "id": "opt01",
-                            "text": "\u9648\u9ed8",
-                            "impact": "\u6307\u5411\u590d\u4ec7\u52a8\u673a"
-                        },
-                        {
-                            "id": "opt02",
-                            "text": "\u82cf\u665a",
-                            "impact": "\u6307\u5411\u60c5\u611f\u7ea0\u7eb7\u52a8\u673a"
-                        },
-                        {
-                            "id": "opt03",
-                            "text": "\u5f20\u6d69",
-                            "impact": "\u6307\u5411\u5229\u76ca\u51b2\u7a81\u52a8\u673a"
-                        },
-                        {
-                            "id": "opt04",
-                            "text": "\u5218\u742a",
-                            "impact": "\u6307\u5411\u9690\u79c1\u6cc4\u9732\u52a8\u673a"
-                        }
-                    ],
-                    "question": "\u4f60\u8ba4\u4e3a\u6740\u5bb3\u6797\u67ab\u7684\u521d\u6b65\u5acc\u7591\u4eba\u662f\u8c01\uff1f"
-                },
-                "title": "\u7b2c\u4e00\u5e55\uff1a\u5bc6\u5ba4\u521d\u73b0",
-                "clueIds": [
-                    "clue001",
-                    "clue002",
-                    "clue003",
-                    "clue004",
-                    "clue005",
-                    "clue006",
-                    "clue007"
-                ],
-                "actIndex": 1,
-                "narrative": "\u51cc\u666800:15\uff0c\u82cf\u665a\u542c\u5230\u4e66\u623f\u4f20\u6765\u5f02\u54cd\uff0c\u53eb\u9192\u5176\u4ed6\u4e09\u4eba\u3002\u4f17\u4eba\u53d1\u73b0\u4e66\u623f\u53cd\u9501\uff0c00:25\u649e\u5f00\u623f\u95e8\u540e\u53d1\u73b0\u6797\u67ab\u6b7b\u4e8e\u5bc6\u5ba4\u4e66\u623f\uff0c\u9700\u901a\u8fc7\u521d\u6b65\u641c\u8bc1\u9501\u5b9a\u521d\u6b65\u5acc\u7591\u4eba\u3002",
-                "discussion": {
-                    "topics": [
-                        "\u6797\u67ab\u6b7b\u4ea1\u65f6\u95f4",
-                        "\u5acc\u7591\u4eba\u4e0d\u5728\u573a\u8bc1\u660e",
-                        "\u5bc6\u5ba4\u7ebf\u7d22"
-                    ],
-                    "guidingQuestions": [
-                        "\u8c01\u6709\u65f6\u95f4\u6f5c\u5165\u4e66\u623f\uff1f",
-                        "\u73b0\u573a\u9c7c\u7ebf\u75d5\u8ff9\u4ee3\u8868\u4ec0\u4e48\uff1f",
-                        "\u54ea\u4e2a\u5acc\u7591\u4eba\u52a8\u673a\u6700\u660e\u663e\uff1f"
-                    ],
-                    "suggestedMinutes": 15
-                },
-                "objectives": [
-                    "\u641c\u8bc1\u4e66\u623f\u3001\u5ba2\u5385\u3001\u9910\u5385\u3001\u82b1\u56ed\u3001\u6240\u6709\u5ba2\u623f",
-                    "\u5206\u6790\u5acc\u7591\u4eba\u4e0d\u5728\u573a\u8bc1\u660e\u4e0e\u52a8\u673a",
-                    "\u6295\u7968\u6307\u8ba4\u521d\u6b65\u5acc\u7591\u4eba"
-                ]
-            },
-            {
-                "vote": {
-                    "options": [
-                        {
-                            "id": "opt10",
-                            "text": "\u51f6\u624b\u4ece\u7a97\u6237\u9003\u51fa\uff0c\u7528\u9c7c\u7ebf\u5c06\u94a5\u5319\u62c9\u56de\u62bd\u5c49",
-                            "impact": "\u6b63\u786e\u7834\u89e3\u5bc6\u5ba4"
-                        },
-                        {
-                            "id": "opt11",
-                            "text": "\u51f6\u624b\u7528\u51b0\u5757\u5361\u4f4f\u95e8\u9501\uff0c\u878d\u5316\u540e\u9501\u95e8",
-                            "impact": "\u9519\u8bef"
-                        },
-                        {
-                            "id": "opt12",
-                            "text": "\u51f6\u624b\u7528\u5907\u7528\u94a5\u5319\u9501\u95e8\u540e\u653e\u56de\u4e66\u623f",
-                            "impact": "\u9519\u8bef"
-                        },
-                        {
-                            "id": "opt13",
-                            "text": "\u51f6\u624b\u4ece\u901a\u98ce\u7ba1\u9053\u9003\u51fa",
-                            "impact": "\u9519\u8bef"
-                        }
-                    ],
-                    "question": "\u4f60\u8ba4\u4e3a\u5bc6\u5ba4\u7684\u6784\u9020\u624b\u6cd5\u662f\uff1f"
-                },
-                "title": "\u7b2c\u4e8c\u5e55\uff1a\u771f\u76f8\u6e10\u660e",
-                "clueIds": [
-                    "clue008",
-                    "clue009",
-                    "clue010",
-                    "clue011",
-                    "clue012",
-                    "clue013",
-                    "clue014",
-                    "clue015"
-                ],
-                "actIndex": 2,
-                "narrative": "\u7b2c\u4e00\u5e55\u8ba8\u8bba\u8ba9\u4f60\u610f\u8bc6\u5230\u5bc6\u5ba4\u4e0e\u9c7c\u7ebf\u6709\u5173\uff0c\u9700\u6df1\u5165\u641c\u8bc1\u79c1\u4eba\u533a\u57df\u4e0e\u9690\u85cf\u5730\u70b9\uff0c\u7834\u89e3\u5bc6\u5ba4\u624b\u6cd5\uff0c\u9501\u5b9a\u771f\u51f6\u3002",
-                "discussion": {
-                    "topics": [
-                        "\u5bc6\u5ba4\u6784\u9020\u624b\u6cd5",
-                        "\u5acc\u7591\u4eba\u6df1\u5c42\u52a8\u673a",
-                        "\u4e0d\u5728\u573a\u8bc1\u660e\u6f0f\u6d1e"
-                    ],
-                    "guidingQuestions": [
-                        "\u8c01\u6709\u673a\u4f1a\u83b7\u53d6\u9c7c\u7ebf\uff1f",
-                        "\u54ea\u4e2a\u5acc\u7591\u4eba\u4e0d\u5728\u573a\u8bc1\u660e\u6709\u6f0f\u6d1e\uff1f",
-                        "\u9c7c\u7ebf\u75d5\u8ff9\u4e0e\u54ea\u4e2a\u5acc\u7591\u4eba\u6709\u5173\uff1f"
-                    ],
-                    "suggestedMinutes": 20
-                },
-                "objectives": [
-                    "\u641c\u8bc1\u8f66\u5e93\u3001\u53a8\u623f\u3001\u6240\u6709\u5ba2\u623f",
-                    "\u5bfb\u627e\u9c7c\u7ebf\u76f8\u5173\u7269\u54c1",
-                    "\u67e5\u627e\u5acc\u7591\u4eba\u6df1\u5c42\u52a8\u673a\u8bc1\u636e",
-                    "\u7834\u89e3\u5bc6\u5ba4\u6784\u9020"
-                ]
-            }
+            "secretInfo": "你偷偷挪用了实验室价值20英镑的稀有金属钽用于私人研究，案发当晚离开实验室后曾偷偷返回庄园查看死者书房",
+            "personalNarrative": "你进入私人区域搜证，补充了最后一批线索。你需要整合所有线索，还原完整的作案过程，同时隐藏自己的挪用行为。",
+            "discussionSuggestions": [
+              "指出格蕾丝的时间线矛盾",
+              "指出密室诡计的关键线索"
+            ]
+          }
         ],
-        "finale": {
-            "endings": [
-                {
-                    "name": "\u771f\u76f8\u5927\u767d",
-                    "endingId": "true_end",
-                    "narrative": "\u73a9\u5bb6\u6210\u529f\u9501\u5b9a\u771f\u51f6\u5f20\u6d69\uff0c\u5f20\u6d69\u4f9b\u8ba4\u4e0d\u8bb3\u88ab\u8b66\u65b9\u5e26\u8d70\u3002\u6797\u67ab\u5f1f\u5f1f\u5c06\u522b\u5885\u6539\u9020\u6210\u516c\u76ca\u517b\u8001\u9662\uff0c\u67ab\u9732\u522b\u5885\u6062\u590d\u5e73\u9759\u3002",
-                    "triggerCondition": "\u6b63\u786e\u6307\u8ba4\u771f\u51f6\u5e76\u7834\u89e3\u5bc6\u5ba4",
-                    "playerEndingSummaries": [
-                        {
-                            "ending": "\u9648\u9ed8\u67e5\u660e\u59b9\u59b9\u533b\u7597\u4e8b\u6545\u771f\u76f8\uff0c\u4e3a\u59b9\u59b9\u62a5\u4ec7",
-                            "characterId": "char01"
-                        },
-                        {
-                            "ending": "\u82cf\u665a\u653e\u4e0b\u4ec7\u6068\uff0c\u5f00\u542f\u65b0\u751f\u6d3b",
-                            "characterId": "char02"
-                        },
-                        {
-                            "ending": "\u5f20\u6d69\u53d7\u5230\u6cd5\u5f8b\u5236\u88c1",
-                            "characterId": "char03"
-                        },
-                        {
-                            "ending": "\u5218\u742a\u8ba9\u6797\u67ab\u4e3a\u6cc4\u9732\u9690\u79c1\u4ed8\u51fa\u4ee3\u4ef7",
-                            "characterId": "char04"
-                        }
-                    ]
-                },
-                {
-                    "name": "\u60ac\u6848\u672a\u4e86",
-                    "endingId": "false_end",
-                    "narrative": "\u771f\u51f6\u5f20\u6d69\u9003\u8131\uff0c\u67ab\u9732\u522b\u5885\u6210\u4e3a\u8bc5\u5492\u4e4b\u5730\uff0c\u65e0\u4eba\u6562\u518d\u8e0f\u5165\u3002",
-                    "triggerCondition": "\u6307\u8ba4\u771f\u51f6\u9519\u8bef\u4e14\u672a\u7834\u89e3\u5bc6\u5ba4",
-                    "playerEndingSummaries": [
-                        {
-                            "ending": "\u9648\u9ed8\u672a\u80fd\u67e5\u660e\u59b9\u59b9\u771f\u76f8\uff0c\u62b1\u61be\u79bb\u5f00",
-                            "characterId": "char01"
-                        },
-                        {
-                            "ending": "\u82cf\u665a\u672a\u80fd\u4e3a\u7236\u62a5\u4ec7\uff0c\u6d3b\u5728\u4ec7\u6068\u4e2d",
-                            "characterId": "char02"
-                        },
-                        {
-                            "ending": "\u5f20\u6d69\u900d\u9065\u6cd5\u5916",
-                            "characterId": "char03"
-                        },
-                        {
-                            "ending": "\u5218\u742a\u672a\u80fd\u8ba9\u6797\u67ab\u4ed8\u51fa\u4ee3\u4ef7",
-                            "characterId": "char04"
-                        }
-                    ]
-                },
-                {
-                    "name": "\u9519\u5224\u597d\u4eba",
-                    "endingId": "misjudge_end",
-                    "narrative": "\u73a9\u5bb6\u6b63\u786e\u7834\u89e3\u5bc6\u5ba4\u4f46\u6307\u8ba4\u65e0\u8f9c\u73a9\u5bb6\uff0c\u771f\u51f6\u9003\u8131\uff0c\u88ab\u51a4\u6789\u7684\u73a9\u5bb6\u80cc\u8d1f\u6740\u4eba\u72af\u7f6a\u540d\u3002",
-                    "triggerCondition": "\u6b63\u786e\u7834\u89e3\u5bc6\u5ba4\u4f46\u6307\u8ba4\u9519\u8bef",
-                    "playerEndingSummaries": [
-                        {
-                            "ending": "\u9648\u9ed8\u88ab\u8bef\u8ba4\u51f6\u624b\uff0c\u63a5\u53d7\u8b66\u65b9\u8c03\u67e5",
-                            "characterId": "char01"
-                        },
-                        {
-                            "ending": "\u82cf\u665a\u88ab\u8bef\u8ba4\u51f6\u624b\uff0c\u63a5\u53d7\u8b66\u65b9\u8c03\u67e5",
-                            "characterId": "char02"
-                        },
-                        {
-                            "ending": "\u5f20\u6d69\u900d\u9065\u6cd5\u5916",
-                            "characterId": "char03"
-                        },
-                        {
-                            "ending": "\u5218\u742a\u88ab\u8bef\u8ba4\u51f6\u624b\uff0c\u63a5\u53d7\u8b66\u65b9\u8c03\u67e5",
-                            "characterId": "char04"
-                        }
-                    ]
-                }
-            ],
-            "finalVote": {
-                "options": [
-                    {
-                        "id": "opt21",
-                        "text": "\u9648\u9ed8",
-                        "impact": "\u6b63\u786e\u5219\u89e6\u53d1\u771f\u76f8\u7ed3\u5c40"
-                    },
-                    {
-                        "id": "opt22",
-                        "text": "\u82cf\u665a",
-                        "impact": "\u9519\u8bef"
-                    },
-                    {
-                        "id": "opt23",
-                        "text": "\u5f20\u6d69",
-                        "impact": "\u6b63\u786e\u5219\u89e6\u53d1\u771f\u76f8\u7ed3\u5c40"
-                    },
-                    {
-                        "id": "opt24",
-                        "text": "\u5218\u742a",
-                        "impact": "\u9519\u8bef"
-                    }
-                ],
-                "question": "\u4f60\u8ba4\u4e3a\u6740\u5bb3\u6797\u67ab\u7684\u771f\u51f6\u662f\u8c01\uff1f"
-            },
-            "truthReveal": "\u771f\u51f6\u4e3a\u5f20\u6d69\uff08char03\uff09\u3002\u4f5c\u6848\u52a8\u673a\uff1a\u5f20\u6d69\u632a\u7528\u5f8b\u6240\u5ba2\u6237\u8d44\u91d1\uff0c\u88ab\u6797\u67ab\u638c\u63e1\u8bc1\u636e\u5e76\u5a01\u80c1\u66dd\u5149\uff0c\u4e3a\u706d\u53e3\u884c\u51f6\u3002\u4f5c\u6848\u65f6\u95f4\uff1a21:30-22:00\uff0c\u5f20\u6d69\u4ee5\u53d6\u7ea2\u9152\u4e3a\u501f\u53e3\u6f5c\u5165\u4e66\u623f\u6740\u4eba\u3002\u5bc6\u5ba4\u624b\u6cd5\uff1a\u7528\u9c7c\u7ebf\u7a7f\u8fc7\u4e66\u684c\u94a5\u5319\u5b54\uff0c\u7ed5\u8fc7\u7a97\u6237\u63d2\u9500\uff0c\u4ece\u7a97\u5916\u9501\u7a97\u540e\u62c9\u9c7c\u7ebf\u5c06\u94a5\u5319\u9001\u5165\u62bd\u5c49\uff0c\u526a\u65ad\u9c7c\u7ebf\u5b8c\u6210\u5bc6\u5ba4\u3002\u5173\u952e\u8bc1\u636e\uff1a\u4e66\u623f\u63d2\u9500\u9c7c\u7ebf\u75d5\u8ff9\u3001\u5f20\u6d69\u8896\u53e3\u9c7c\u7ebf\u6b8b\u7559\u3001\u8f66\u5e93\u9c7c\u7ebf\u5377\u8f74\u3001\u6797\u67ab\u624b\u673a\u5185\u7684\u632a\u7528\u8bc1\u636e\u77ed\u4fe1\u3002"
+        "characterId": "6da39b81-d33b-48df-94f9-da53bde5c78e",
+        "characterName": "埃利亚斯·索恩",
+        "finaleContent": {
+          "votingSuggestion": "建议投票给格蕾丝·黑斯廷斯，她的时间线存在矛盾，且有关键证据指向她。",
+          "closingStatementGuide": "请总结你的推理过程，指出真凶的作案手法与关键证据，同时隐藏自身的秘密。"
         },
-        "prologue": {
-            "worldSetting": "\u73b0\u4ee3\u5c01\u95ed\u72ec\u680b\u522b\u5885\uff0c\u65e0\u5916\u4eba\u95ef\u5165\u75d5\u8ff9\uff0c\u6240\u6709\u5acc\u7591\u4eba\u5747\u4e3a\u53d7\u9080\u65e7\u53cb",
-            "characterIntros": [
-                {
-                    "characterId": "char01",
-                    "characterName": "\u9648\u9ed8",
-                    "publicDescription": "\u6c89\u7a33\u5e72\u7ec3\u7684\u79c1\u5bb6\u4fa6\u63a2\uff0c\u968f\u8eab\u5e26\u9ed1\u8272\u516c\u6587\u5305"
-                },
-                {
-                    "characterId": "char02",
-                    "characterName": "\u82cf\u665a",
-                    "publicDescription": "\u6e29\u67d4\u4f18\u96c5\u7684\u82b1\u827a\u5e08\uff0c\u624b\u6301\u5e72\u82b1\u795e\u8272\u6194\u60b4"
-                },
-                {
-                    "characterId": "char03",
-                    "characterName": "\u5f20\u6d69",
-                    "publicDescription": "\u897f\u88c5\u9769\u5c65\u7684\u5f8b\u5e08\uff0c\u4e0d\u505c\u64e6\u62ed\u624b\u5fc3\u6c57\u6c34"
-                },
-                {
-                    "characterId": "char04",
-                    "characterName": "\u5218\u742a",
-                    "publicDescription": "\u7a7f\u62a4\u58eb\u670d\u7684\u5973\u751f\uff0c\u65f6\u4e0d\u65f6\u770b\u5411\u4e66\u623f\u65b9\u5411"
-                }
-            ],
-            "backgroundNarrative": "2024\u5e74\u79cb\uff0c\u4f60\u53d7\u9080\u6765\u5230\u5e02\u90ca\u67ab\u9732\u522b\u5885\uff0c\u522b\u5885\u4e3b\u4eba\u6797\u67ab\u662f\u4f60\u7684\u65e7\u53cb\uff0c\u665a\u9910\u5e2d\u95f4\u4ed6\u795e\u8272\u614c\u5f20\uff0c\u53ea\u8bf4\u660e\u5929\u6709\u91cd\u8981\u4e8b\u5ba3\u5e03\uff0c\u6c14\u6c1b\u5fae\u5999\u3002"
-        },
-        "dmHandbook": {
-            "actGuides": [
-                {
-                    "actIndex": 1,
-                    "keyEventHints": [
-                        "\u63d0\u9192\u73a9\u5bb6\u8bb0\u5f55\u6bcf\u4e2a\u5acc\u7591\u4eba\u7684\u4e0d\u5728\u573a\u8bc1\u660e",
-                        "\u5f15\u5bfc\u73a9\u5bb6\u6ce8\u610f\u73b0\u573a\u9c7c\u7ebf\u75d5\u8ff9"
-                    ],
-                    "readAloudText": "\u51cc\u666800:15\uff0c\u82cf\u665a\u542c\u5230\u4e66\u623f\u4f20\u6765\u5f02\u54cd\uff0c\u53eb\u9192\u5176\u4ed6\u4e09\u4eba\u3002\u4f17\u4eba\u53d1\u73b0\u4e66\u623f\u53cd\u9501\uff0c00:25\u649e\u5f00\u623f\u95e8\u540e\u53d1\u73b0\u6797\u67ab\u6b7b\u4e8e\u5bc6\u5ba4\u4e66\u623f\u3002",
-                    "dmPrivateNotes": "\u63d0\u9192\u51f6\u624b\u89d2\u8272\u9690\u85cf\u5173\u952e\u7ebf\u7d22\uff0c\u5982\u5f20\u6d69\u7684\u9c7c\u7ebf\u6b8b\u7559",
-                    "voteHostingNotes": "\u533f\u540d\u6295\u7968\u7edf\u8ba1\u7ed3\u679c\uff0c\u4e0d\u516c\u5e03\u6b63\u786e\u7b54\u6848",
-                    "discussionGuidance": "\u5f15\u5bfc\u73a9\u5bb6\u8ba8\u8bba\u4e0d\u5728\u573a\u8bc1\u660e\u4e0e\u521d\u6b65\u52a8\u673a\uff0c\u4e0d\u8981\u8fc7\u65e9\u66b4\u9732\u5173\u952e\u7ebf\u7d22",
-                    "clueDistributionInstructions": [
-                        {
-                            "clueId": "clue001",
-                            "condition": "\u7b2c\u4e00\u5e55\u641c\u8bc1\u5f00\u59cb",
-                            "targetCharacterId": "all"
-                        },
-                        {
-                            "clueId": "clue002",
-                            "condition": "\u7b2c\u4e00\u5e55\u641c\u8bc1\u5f00\u59cb",
-                            "targetCharacterId": "all"
-                        },
-                        {
-                            "clueId": "clue003",
-                            "condition": "\u7b2c\u4e00\u5e55\u641c\u8bc1\u5f00\u59cb",
-                            "targetCharacterId": "all"
-                        },
-                        {
-                            "clueId": "clue004",
-                            "condition": "\u641c\u8bc1\u5ba2\u5385",
-                            "targetCharacterId": "char01"
-                        },
-                        {
-                            "clueId": "clue005",
-                            "condition": "\u641c\u8bc1\u82b1\u56ed",
-                            "targetCharacterId": "char02"
-                        },
-                        {
-                            "clueId": "clue006",
-                            "condition": "\u641c\u8bc1\u9910\u5385",
-                            "targetCharacterId": "all"
-                        },
-                        {
-                            "clueId": "clue007",
-                            "condition": "\u641c\u8bc1\u5218\u742a\u5ba2\u623f",
-                            "targetCharacterId": "char04"
-                        }
-                    ]
-                },
-                {
-                    "actIndex": 2,
-                    "keyEventHints": [
-                        "\u63d0\u9192\u73a9\u5bb6\u641c\u8bc1\u8f66\u5e93\u4e0e\u5ba2\u623f",
-                        "\u5f15\u5bfc\u73a9\u5bb6\u5173\u6ce8\u5acc\u7591\u4eba\u7684\u6df1\u5c42\u52a8\u673a"
-                    ],
-                    "readAloudText": "\u7b2c\u4e00\u5e55\u7684\u8ba8\u8bba\u8ba9\u4f60\u610f\u8bc6\u5230\u5bc6\u5ba4\u4e0e\u9c7c\u7ebf\u6709\u5173\uff0c\u8bf7\u6df1\u5165\u641c\u8bc1\u79c1\u4eba\u533a\u57df\u4e0e\u9690\u85cf\u5730\u70b9\uff0c\u7834\u89e3\u5bc6\u5ba4\u624b\u6cd5\u3002",
-                    "dmPrivateNotes": "\u9002\u5f53\u7ed9\u672a\u627e\u5230\u5173\u952e\u7ebf\u7d22\u7684\u73a9\u5bb6\u63d0\u793a\uff0c\u907f\u514d\u6e38\u620f\u5361\u5173",
-                    "voteHostingNotes": "\u533f\u540d\u6295\u7968\u7edf\u8ba1\u5bc6\u5ba4\u624b\u6cd5\u7ed3\u679c\uff0c\u4e0d\u516c\u5e03\u6b63\u786e\u7b54\u6848",
-                    "discussionGuidance": "\u5f15\u5bfc\u73a9\u5bb6\u7834\u89e3\u5bc6\u5ba4\u624b\u6cd5\uff0c\u4e0d\u8981\u63d0\u524d\u900f\u9732\u771f\u51f6\u8eab\u4efd",
-                    "clueDistributionInstructions": [
-                        {
-                            "clueId": "clue008",
-                            "condition": "\u7b2c\u4e8c\u5e55\u641c\u8bc1\u5f00\u59cb",
-                            "targetCharacterId": "all"
-                        },
-                        {
-                            "clueId": "clue009",
-                            "condition": "\u641c\u8bc1\u82cf\u665a\u5ba2\u623f",
-                            "targetCharacterId": "char02"
-                        },
-                        {
-                            "clueId": "clue010",
-                            "condition": "\u641c\u8bc1\u5f20\u6d69\u5ba2\u623f",
-                            "targetCharacterId": "char03"
-                        },
-                        {
-                            "clueId": "clue011",
-                            "condition": "\u641c\u8bc1\u9648\u9ed8\u5ba2\u623f",
-                            "targetCharacterId": "char01"
-                        },
-                        {
-                            "clueId": "clue012",
-                            "condition": "\u641c\u8bc1\u5218\u742a\u5ba2\u623f",
-                            "targetCharacterId": "char04"
-                        },
-                        {
-                            "clueId": "clue013",
-                            "condition": "\u641c\u8bc1\u4e66\u623f",
-                            "targetCharacterId": "all"
-                        },
-                        {
-                            "clueId": "clue014",
-                            "condition": "\u641c\u8bc1\u4e66\u623f",
-                            "targetCharacterId": "all"
-                        },
-                        {
-                            "clueId": "clue015",
-                            "condition": "\u641c\u8bc1\u4e66\u623f",
-                            "targetCharacterId": "all"
-                        }
-                    ]
-                }
-            ],
-            "finaleGuide": {
-                "truthRevealScript": "\u73b0\u5728\u4e3a\u5927\u5bb6\u63ed\u793a\u6848\u4ef6\u771f\u76f8\uff1a\u771f\u51f6\u662f\u5f20\u6d69\uff0c\u4f5c\u6848\u52a8\u673a\u4e3a\u632a\u7528\u516c\u6b3e\u88ab\u6797\u67ab\u5a01\u80c1\uff0c\u624b\u6cd5\u4e3a\u7528\u9c7c\u7ebf\u5236\u9020\u5bc6\u5ba4\uff0c\u5173\u952e\u8bc1\u636e\u5305\u62ec...",
-                "endingJudgmentNotes": "\u6839\u636e\u6295\u7968\u7ed3\u679c\u89e6\u53d1\u5bf9\u5e94\u7ed3\u5c40\uff0c\u6b63\u786e\u6307\u8ba4\u771f\u51f6\u5219\u89e6\u53d1\u771f\u76f8\u7ed3\u5c40\uff0c\u9519\u8bef\u5219\u89e6\u53d1\u9519\u5224\u7ed3\u5c40\uff0c\u6b63\u786e\u7834\u89e3\u5bc6\u5ba4\u4f46\u6307\u8ba4\u9519\u8bef\u5219\u89e6\u53d1\u9519\u5224\u597d\u4eba\u7ed3\u5c40",
-                "finalVoteHostingFlow": "\u8bf7\u73a9\u5bb6\u533f\u540d\u6295\u7968\u6307\u8ba4\u771f\u51f6\uff0c\u7edf\u8ba1\u7ed3\u679c\u540e\u516c\u5e03\u771f\u76f8"
+        "prologueContent": {
+          "relationships": [
+            {
+              "target": "格蕾丝·黑斯廷斯",
+              "relation": "竞争对手",
+              "description": "她知晓你挪用公款的事，曾诬陷你偷窃实验室物资"
             },
-            "prologueGuide": {
-                "openingScript": "\u5404\u4f4d\u73a9\u5bb6\u597d\uff0c\u6b22\u8fce\u6765\u5230\u300a\u67ab\u9732\u522b\u5885\u7684\u6740\u610f\u300b\u3002\u4eca\u5929\u7684\u6545\u4e8b\u53d1\u751f\u57282024\u5e74\u79cb\u7684\u5e02\u90ca\u67ab\u9732\u522b\u5885\uff0c\u4f60\u4eec\u90fd\u662f\u6797\u67ab\u7684\u65e7\u53cb\uff0c\u53d7\u9080\u524d\u6765\u805a\u4f1a\u3002\u665a\u9910\u5e2d\u95f4\u6797\u67ab\u795e\u8272\u614c\u5f20\uff0c\u53ea\u8bf4\u660e\u5929\u6709\u91cd\u8981\u4e8b\u5ba3\u5e03\uff0c\u8bf7\u9605\u8bfb\u81ea\u5df1\u7684\u89d2\u8272\u5267\u672c\u3002",
-                "rulesIntroduction": "\u5267\u672c\u5206\u4e3a\u4e24\u5e55\uff0c\u6bcf\u5e55\u6709\u641c\u8bc1\u4e0e\u8ba8\u8bba\u73af\u8282\uff0c\u6700\u7ec8\u6295\u7968\u6307\u8ba4\u771f\u51f6\uff0c\u6e38\u620f\u65f6\u957f\u7ea62\u5c0f\u65f6\uff0c\u8bf7\u63a7\u5236\u8ba8\u8bba\u65f6\u95f4\u3002",
-                "characterAssignmentNotes": "\u53ef\u901a\u8fc7\u968f\u673a\u62bd\u53d6\u6216\u73a9\u5bb6\u81ea\u9009\u5206\u914d\u89d2\u8272\uff0c\u786e\u4fdd\u51f6\u624b\u89d2\u8272\u4e0d\u88ab\u63d0\u524d\u66b4\u9732"
+            {
+              "target": "阿尔弗雷德·芬奇",
+              "relation": "竞争对手",
+              "description": "他窃取了你的专利技术，两人曾在实验室激烈争吵"
+            },
+            {
+              "target": "克莱尔·卡文迪许",
+              "relation": "同事",
+              "description": "曾帮她修理绘画工具，她对你较为信任"
+            },
+            {
+              "target": "托马斯·贝茨",
+              "relation": "盟友",
+              "description": "与你一同调试装置，告知你装置存在安全隐患"
             }
+          ],
+          "backgroundStory": "你是死者劳伦斯·卡文迪许的首席技术助手，跟随他工作已满五年，负责打理庄园内的机械实验室与日常科研事务。案发前一天刚从伦敦采购完稀有精密零件返回庄园，当晚在实验室加班到深夜，离开时确认所有门窗锁好。",
+          "initialKnowledge": [
+            "案发当晚离开实验室后曾返回书房探查",
+            "劳伦斯曾承诺给你启动资金成立工作室",
+            "格蕾丝曾威胁要揭发你的偷窃行为"
+          ]
+        }
+      },
+      {
+        "actContents": [
+          {
+            "actIndex": 1,
+            "clueHints": [
+              "注意埃利亚斯的工具袋",
+              "注意克莱尔的手袋"
+            ],
+            "objectives": [
+              "隐藏挪用公款的秘密",
+              "销毁书房内的公款证据",
+              "误导其他玩家指向其他嫌疑人"
+            ],
+            "secretInfo": "你偷偷挪用了庄园公款50英镑支付弟弟的住院费用，案发当晚离开书房后曾偷偷返回书房寻找挪用公款的账本",
+            "personalNarrative": "你是庄园管家，听到劳伦斯的死讯后假装惊慌失措，需要隐藏自己收纳袋内的账本碎片，避免被怀疑。",
+            "discussionSuggestions": [
+              "指责埃利亚斯偷窃实验室物资",
+              "指责克莱尔修改遗嘱"
+            ]
+          },
+          {
+            "actIndex": 2,
+            "clueHints": [
+              "注意实验室的传动杆痕迹",
+              "注意书房的镇纸痕迹"
+            ],
+            "objectives": [
+              "销毁公款证据",
+              "隐藏密室诡计的关键线索",
+              "误导其他玩家"
+            ],
+            "secretInfo": "你偷偷挪用了庄园公款50英镑支付弟弟的住院费用，案发当晚离开书房后曾偷偷返回书房寻找挪用公款的账本",
+            "personalNarrative": "你进入书房与实验室搜证，发现了插销上的马鬃线痕迹，以及实验室装置的修改痕迹。你需要销毁自己的账本碎片，同时误导其他玩家指向其他嫌疑人。",
+            "discussionSuggestions": [
+              "指责阿尔弗雷德修改装置程序",
+              "指责托马斯偷走核心齿轮"
+            ]
+          },
+          {
+            "actIndex": 3,
+            "clueHints": [
+              "注意埃利亚斯的钽金属粉末",
+              "注意阿尔弗雷德的笔记本"
+            ],
+            "objectives": [
+              "隐藏自身秘密",
+              "误导其他玩家",
+              "逃脱法律制裁"
+            ],
+            "secretInfo": "你偷偷挪用了庄园公款50英镑支付弟弟的住院费用，案发当晚离开书房后曾偷偷返回书房寻找挪用公款的账本",
+            "personalNarrative": "你进入私人区域搜证，补充了最后一批线索。你需要隐藏自己的账本碎片，同时误导其他玩家指向其他嫌疑人。",
+            "discussionSuggestions": [
+              "指出埃利亚斯的时间线矛盾",
+              "指出阿尔弗雷德的修改痕迹"
+            ]
+          }
+        ],
+        "characterId": "db547eed-3bbe-441a-9691-199e0679b9cb",
+        "characterName": "格蕾丝·黑斯廷斯",
+        "finaleContent": {
+          "votingSuggestion": "建议投票给埃利亚斯·索恩或阿尔弗雷德·芬奇，转移大家的注意力。",
+          "closingStatementGuide": "请总结你的误导策略，隐藏自己的秘密，同时指出其他玩家的破绽。"
         },
-        "playerHandbooks": [
+        "prologueContent": {
+          "relationships": [
             {
-                "actContents": [
-                    {
-                        "actIndex": 1,
-                        "clueHints": [
-                            "\u6ce8\u610f\u4e66\u623f\u7684\u9c7c\u7ebf\u75d5\u8ff9",
-                            "\u67e5\u770b\u9057\u5631\u8349\u7a3f"
-                        ],
-                        "objectives": [
-                            "\u627e\u51fa\u771f\u51f6",
-                            "\u9690\u85cf\u590d\u4ec7\u610f\u56fe"
-                        ],
-                        "secretInfo": "\u4f60\u66fe\u8ba1\u5212\u4e3a\u59b9\u59b9\u590d\u4ec7\uff0c\u8d76\u5230\u4e66\u623f\u65f6\u6797\u67ab\u5df2\u6b7b",
-                        "personalNarrative": "\u4f60\u572821:20\u8def\u8fc7\u4e66\u623f\u770b\u5230\u6797\u67ab\uff0c\u4e4b\u540e\u4e00\u76f4\u5728\u5ba2\u5385\u559d\u9152\u770b\u7535\u5f71\uff0c\u76f4\u523000:10\u5218\u742a\u6765\u5230\u5ba2\u5385\u3002",
-                        "discussionSuggestions": [
-                            "\u8be2\u95ee\u5176\u4ed6\u4eba\u7684\u4e0d\u5728\u573a\u8bc1\u660e",
-                            "\u8ba8\u8bba\u5bc6\u5ba4\u7ebf\u7d22"
-                        ]
-                    },
-                    {
-                        "actIndex": 2,
-                        "clueHints": [
-                            "\u641c\u8bc1\u8f66\u5e93\u7684\u9c7c\u7ebf\u5377\u8f74",
-                            "\u67e5\u770b\u6797\u67ab\u7684\u624b\u673a\u77ed\u4fe1"
-                        ],
-                        "objectives": [
-                            "\u67e5\u660e\u59b9\u59b9\u771f\u76f8",
-                            "\u9501\u5b9a\u771f\u51f6"
-                        ],
-                        "secretInfo": "\u4f60\u672a\u5b9e\u9645\u52a8\u624b\u6740\u4eba",
-                        "personalNarrative": "\u4f60\u641c\u8bc1\u53d1\u73b0\u59b9\u59b9\u7684\u533b\u7597\u4e8b\u6545\u62a5\u544a\u4e0e\u6797\u67ab\u7684\u632a\u7528\u8bc1\u636e\uff0c\u6ce8\u610f\u5230\u5f20\u6d69\u8896\u53e3\u7684\u9c7c\u7ebf\u6b8b\u7559\u3002",
-                        "discussionSuggestions": [
-                            "\u8ba8\u8bba\u5f20\u6d69\u7684\u4e0d\u5728\u573a\u8bc1\u660e\u6f0f\u6d1e",
-                            "\u7834\u89e3\u5bc6\u5ba4\u624b\u6cd5"
-                        ]
-                    }
-                ],
-                "characterId": "char01",
-                "characterName": "\u9648\u9ed8",
-                "finaleContent": {
-                    "votingSuggestion": "\u6839\u636e\u8bc1\u636e\u6307\u5411\u5f20\u6d69\u6295\u7968",
-                    "closingStatementGuide": "\u53ef\u4ee5\u9648\u8ff0\u81ea\u5df1\u7684\u63a8\u7406\u8fc7\u7a0b\uff0c\u6307\u51fa\u5f20\u6d69\u7684\u4f5c\u6848\u8bc1\u636e"
-                },
-                "prologueContent": {
-                    "relationships": [
-                        "\u4e0e\u6797\u67ab\u6709\u65e7\u6028",
-                        "\u4e0e\u82cf\u665a\u662f\u540c\u5b66",
-                        "\u4e0e\u5f20\u6d69\u662f\u53d1\u5c0f",
-                        "\u4e0e\u5218\u742a\u662f\u5b66\u957f\u5b66\u59b9"
-                    ],
-                    "backgroundStory": "\u4f60\u662f32\u5c81\u79c1\u5bb6\u4fa6\u63a2\uff0c\u53d7\u6797\u9633\u59d4\u6258\u8c03\u67e5\u6797\u67ab\u632a\u7528\u516c\u6b3e\uff0c\u540c\u65f6\u6000\u7591\u59b9\u59b9\u7684\u533b\u7597\u4e8b\u6545\u4e0e\u6797\u67ab\u6709\u5173\u3002",
-                    "initialKnowledge": [
-                        "\u643a\u5e26\u4fa6\u63a2\u8bc1",
-                        "\u7b14\u8bb0\u672c\u5185\u6709\u59b9\u59b9\u7684\u533b\u7597\u4e8b\u6545\u8bb0\u5f55"
-                    ]
-                }
+              "target": "埃利亚斯·索恩",
+              "relation": "竞争对手",
+              "description": "他知晓你挪用公款的事，曾威胁要告知雇主"
             },
             {
-                "actContents": [
-                    {
-                        "actIndex": 1,
-                        "clueHints": [
-                            "\u6ce8\u610f\u82b1\u56ed\u7684\u811a\u5370",
-                            "\u67e5\u770b\u9910\u5385\u7684\u9057\u5631\u8349\u7a3f"
-                        ],
-                        "objectives": [
-                            "\u627e\u51fa\u771f\u51f6",
-                            "\u9690\u85cf\u590d\u4ec7\u610f\u56fe"
-                        ],
-                        "secretInfo": "\u4f60\u77e5\u6653\u6797\u67ab\u632a\u7528\u7236\u4eb2\u624b\u672f\u8d39",
-                        "personalNarrative": "\u4f60\u572821:30\u524d\u5f80\u82b1\u56ed\u6563\u6b65\uff0c22:00\u8fd4\u56de\u522b\u5885\uff0c\u4e4b\u540e\u56de\u623f\u4f11\u606f\uff0c00:15\u542c\u5230\u4e66\u623f\u5f02\u54cd\u3002",
-                        "discussionSuggestions": [
-                            "\u8ba8\u8bba\u81ea\u5df1\u7684\u4e0d\u5728\u573a\u8bc1\u660e",
-                            "\u8be2\u95ee\u5176\u4ed6\u4eba\u7684\u884c\u8e2a"
-                        ]
-                    },
-                    {
-                        "actIndex": 2,
-                        "clueHints": [
-                            "\u641c\u8bc1\u8f66\u5e93\u7684\u9c7c\u7ebf\u5377\u8f74",
-                            "\u67e5\u770b\u6797\u67ab\u7684\u624b\u673a\u77ed\u4fe1"
-                        ],
-                        "objectives": [
-                            "\u4e3a\u7236\u62a5\u4ec7",
-                            "\u9501\u5b9a\u771f\u51f6"
-                        ],
-                        "secretInfo": "\u4f60\u66fe\u8ba1\u5212\u5411\u6797\u67ab\u7d22\u8981\u8d54\u507f",
-                        "personalNarrative": "\u4f60\u641c\u8bc1\u53d1\u73b0\u7236\u4eb2\u7684\u624b\u672f\u8d39\u8d26\u5355\uff0c\u6ce8\u610f\u5230\u5f20\u6d69\u7684\u9c7c\u7ebf\u6b8b\u7559\u3002",
-                        "discussionSuggestions": [
-                            "\u8ba8\u8bba\u5f20\u6d69\u7684\u52a8\u673a",
-                            "\u7834\u89e3\u5bc6\u5ba4\u624b\u6cd5"
-                        ]
-                    }
-                ],
-                "characterId": "char02",
-                "characterName": "\u82cf\u665a",
-                "finaleContent": {
-                    "votingSuggestion": "\u6839\u636e\u8bc1\u636e\u6307\u5411\u5f20\u6d69\u6295\u7968",
-                    "closingStatementGuide": "\u53ef\u4ee5\u9648\u8ff0\u81ea\u5df1\u53d1\u73b0\u7684\u624b\u672f\u8d39\u8bc1\u636e\uff0c\u6307\u51fa\u5f20\u6d69\u7684\u5acc\u7591"
-                },
-                "prologueContent": {
-                    "relationships": [
-                        "\u4e0e\u6797\u67ab\u6709\u65e7\u6028",
-                        "\u4e0e\u9648\u9ed8\u662f\u540c\u5b66",
-                        "\u4e0e\u5f20\u6d69\u662f\u6797\u67ab\u53d1\u5c0f",
-                        "\u4e0e\u5218\u742a\u662f\u670b\u53cb"
-                    ],
-                    "backgroundStory": "\u4f60\u662f\u82b1\u827a\u5e08\uff0c\u66fe\u662f\u6797\u67ab\u524d\u5973\u53cb\uff0c\u7236\u4eb2\u7684\u624b\u672f\u8d39\u88ab\u6797\u67ab\u632a\u7528\u5bfc\u81f4\u53bb\u4e16\u3002",
-                    "initialKnowledge": [
-                        "\u643a\u5e26\u82b1\u827a\u526a",
-                        "\u7236\u4eb2\u7684\u624b\u672f\u8d39\u8d26\u5355"
-                    ]
-                }
+              "target": "克莱尔·卡文迪许",
+              "relation": "盟友",
+              "description": "照顾克莱尔，帮她处理社交麻烦，知晓她修改遗嘱的秘密"
             },
             {
-                "actContents": [
-                    {
-                        "actIndex": 1,
-                        "clueHints": [
-                            "\u6ce8\u610f\u8f66\u5e93\u7684\u9c7c\u7ebf",
-                            "\u9500\u6bc1\u81ea\u5df1\u7684\u75d5\u8ff9"
-                        ],
-                        "objectives": [
-                            "\u9690\u85cf\u632a\u7528\u8bc1\u636e",
-                            "\u4e0d\u88ab\u6307\u8ba4\u4e3a\u51f6\u624b"
-                        ],
-                        "secretInfo": "\u4f60\u632a\u7528\u4e86\u5f8b\u6240\u5ba2\u6237\u8d44\u91d1\uff0c\u88ab\u6797\u67ab\u6293\u4f4f\u628a\u67c4",
-                        "personalNarrative": "\u4f60\u572821:30\u524d\u5f80\u8f66\u5e93\u53d6\u7ea2\u9152\uff0c\u5b9e\u9645\u662f\u51c6\u5907\u9c7c\u7ebf\u548c\u88c1\u7eb8\u5200\uff0c22:00\u8fd4\u56de\u522b\u5885\u3002",
-                        "discussionSuggestions": [
-                            "\u63d0\u4f9b\u865a\u5047\u4e0d\u5728\u573a\u8bc1\u660e",
-                            "\u8f6c\u79fb\u5176\u4ed6\u73a9\u5bb6\u7684\u6ce8\u610f\u529b"
-                        ]
-                    },
-                    {
-                        "actIndex": 2,
-                        "clueHints": [
-                            "\u4e0d\u8981\u8ba9\u5176\u4ed6\u73a9\u5bb6\u53d1\u73b0\u81ea\u5df1\u7684\u8896\u53e3\u9c7c\u7ebf",
-                            "\u9500\u6bc1\u6797\u67ab\u7684\u7535\u8111\u8bc1\u636e"
-                        ],
-                        "objectives": [
-                            "\u9003\u8131\u6cd5\u5f8b\u5236\u88c1",
-                            "\u9690\u85cf\u8bc1\u636e"
-                        ],
-                        "secretInfo": "\u4f60\u5c31\u662f\u6740\u5bb3\u6797\u67ab\u7684\u771f\u51f6",
-                        "personalNarrative": "\u4f60\u9700\u8981\u9690\u85cf\u81ea\u5df1\u7684\u9c7c\u7ebf\u6b8b\u7559\uff0c\u9500\u6bc1\u6797\u67ab\u7684\u632a\u7528\u8bc1\u636e\u3002",
-                        "discussionSuggestions": [
-                            "\u8bef\u5bfc\u73a9\u5bb6\u6307\u5411\u5176\u4ed6\u5acc\u7591\u4eba",
-                            "\u5426\u8ba4\u81ea\u5df1\u7684\u4f5c\u6848\u53ef\u80fd"
-                        ]
-                    }
-                ],
-                "characterId": "char03",
-                "characterName": "\u5f20\u6d69",
-                "finaleContent": {
-                    "votingSuggestion": "\u5c3d\u91cf\u8bef\u5bfc\u73a9\u5bb6\u6307\u5411\u5176\u4ed6\u89d2\u8272",
-                    "closingStatementGuide": "\u53ef\u4ee5\u5c1d\u8bd5\u8fa9\u89e3\uff0c\u8f6c\u79fb\u73a9\u5bb6\u6ce8\u610f\u529b"
-                },
-                "prologueContent": {
-                    "relationships": [
-                        "\u4e0e\u6797\u67ab\u6709\u5229\u76ca\u51b2\u7a81",
-                        "\u4e0e\u9648\u9ed8\u662f\u540c\u5b66",
-                        "\u4e0e\u82cf\u665a\u662f\u6797\u67ab\u524d\u53cb",
-                        "\u4e0e\u5218\u742a\u662f\u6797\u67ab\u5b66\u59b9"
-                    ],
-                    "backgroundStory": "\u4f60\u662f\u5f8b\u5e08\uff0c\u6797\u67ab\u53d1\u5c0f\uff0c\u632a\u7528\u5f8b\u6240\u5ba2\u6237\u8d44\u91d1\u88ab\u6797\u67ab\u638c\u63e1\u8bc1\u636e\u3002",
-                    "initialKnowledge": [
-                        "\u643a\u5e26\u5f8b\u5e08\u8bc1",
-                        "\u5f8b\u6240\u632a\u7528\u8bc1\u636e\u6587\u4ef6"
-                    ]
-                }
+              "target": "阿尔弗雷德·芬奇",
+              "relation": "陌生人",
+              "description": "首次见面的客人，对机械装置感兴趣"
             },
             {
-                "actContents": [
-                    {
-                        "actIndex": 1,
-                        "clueHints": [
-                            "\u6ce8\u610f\u81ea\u5df1\u7684\u5b89\u7720\u836f",
-                            "\u67e5\u770b\u6797\u67ab\u7684\u5a01\u80c1\u77ed\u4fe1"
-                        ],
-                        "objectives": [
-                            "\u627e\u51fa\u771f\u51f6",
-                            "\u9690\u85cf\u590d\u4ec7\u610f\u56fe"
-                        ],
-                        "secretInfo": "\u4f60\u77e5\u6653\u6797\u67ab\u6cc4\u9732\u4f60\u7684\u9690\u79c1",
-                        "personalNarrative": "\u4f60\u572821:30\u8fd4\u56de\u5ba2\u623f\uff0c22:30\u524d\u5f80\u53a8\u623f\u5012\u6c34\uff0c\u8def\u8fc7\u4e66\u623f\u542c\u5230\u7ffb\u4e66\u58f0\uff0c00:10\u56e0\u5931\u7720\u524d\u5f80\u5ba2\u5385\u3002",
-                        "discussionSuggestions": [
-                            "\u8ba8\u8bba\u81ea\u5df1\u7684\u4e0d\u5728\u573a\u8bc1\u660e",
-                            "\u8be2\u95ee\u5176\u4ed6\u4eba\u7684\u884c\u8e2a"
-                        ]
-                    },
-                    {
-                        "actIndex": 2,
-                        "clueHints": [
-                            "\u641c\u8bc1\u8f66\u5e93\u7684\u9c7c\u7ebf\u5377\u8f74",
-                            "\u67e5\u770b\u6797\u67ab\u7684\u624b\u673a\u77ed\u4fe1"
-                        ],
-                        "objectives": [
-                            "\u8ba9\u6797\u67ab\u4ed8\u51fa\u4ee3\u4ef7",
-                            "\u9501\u5b9a\u771f\u51f6"
-                        ],
-                        "secretInfo": "\u4f60\u66fe\u8ba1\u5212\u62a5\u590d\u6797\u67ab",
-                        "personalNarrative": "\u4f60\u641c\u8bc1\u53d1\u73b0\u6797\u67ab\u7684\u5a01\u80c1\u77ed\u4fe1\uff0c\u6ce8\u610f\u5230\u5f20\u6d69\u7684\u9c7c\u7ebf\u6b8b\u7559\u3002",
-                        "discussionSuggestions": [
-                            "\u8ba8\u8bba\u5f20\u6d69\u7684\u52a8\u673a",
-                            "\u7834\u89e3\u5bc6\u5ba4\u624b\u6cd5"
-                        ]
-                    }
-                ],
-                "characterId": "char04",
-                "characterName": "\u5218\u742a",
-                "finaleContent": {
-                    "votingSuggestion": "\u6839\u636e\u8bc1\u636e\u6307\u5411\u5f20\u6d69\u6295\u7968",
-                    "closingStatementGuide": "\u53ef\u4ee5\u9648\u8ff0\u81ea\u5df1\u53d1\u73b0\u7684\u9690\u79c1\u6cc4\u9732\u8bc1\u636e\uff0c\u6307\u51fa\u5f20\u6d69\u7684\u5acc\u7591"
-                },
-                "prologueContent": {
-                    "relationships": [
-                        "\u4e0e\u6797\u67ab\u6709\u65e7\u6028",
-                        "\u4e0e\u9648\u9ed8\u662f\u5b66\u957f\u5b66\u59b9",
-                        "\u4e0e\u82cf\u665a\u662f\u670b\u53cb",
-                        "\u4e0e\u5f20\u6d69\u662f\u6797\u67ab\u53d1\u5c0f"
-                    ],
-                    "backgroundStory": "\u4f60\u662f\u62a4\u58eb\uff0c\u6797\u67ab\u5b66\u59b9\uff0c\u9690\u79c1\u88ab\u6797\u67ab\u6cc4\u9732\u5bfc\u81f4\u4e22\u5de5\u4f5c\u3001\u88ab\u9000\u5a5a\u3002",
-                    "initialKnowledge": [
-                        "\u643a\u5e26\u62a4\u58eb\u5e3d",
-                        "\u624b\u673a\u5185\u7684\u6797\u67ab\u5a01\u80c1\u77ed\u4fe1"
-                    ]
-                }
+              "target": "托马斯·贝茨",
+              "relation": "陌生人",
+              "description": "临时机械师，看起来粗心大意"
             }
-        ]
-    }
+          ],
+          "backgroundStory": "你是死者劳伦斯·卡文迪许雇佣的庄园管家，已工作三年，负责打理庄园日常运转与社交接待。案发当晚最后一个离开死者书房，离开前曾送过一杯热可可。",
+          "initialKnowledge": [
+            "劳伦斯发现了你挪用公款的事并威胁报警",
+            "案发当晚离开书房后曾返回寻找被藏起的账本",
+            "书房内的热可可杯上留有你的指纹"
+          ]
+        }
+      },
+      {
+        "actContents": [
+          {
+            "actIndex": 1,
+            "clueHints": [
+              "注意埃利亚斯的工具袋",
+              "注意托马斯的工具箱"
+            ],
+            "objectives": [
+              "隐藏窃取专利的秘密",
+              "销毁装置修改的证据",
+              "误导其他玩家指向其他嫌疑人"
+            ],
+            "secretInfo": "你通过贿赂死者助手窃取了三年前提交的未公开专利，案发当晚曾偷偷进入实验室修改新机械装置的程序",
+            "personalNarrative": "你刚抵达庄园，在餐厅遇到了其他人，随后听到格蕾丝的尖叫，发现劳伦斯死于书房。你需要隐藏自己被撕掉的笔记本，避免被怀疑。",
+            "discussionSuggestions": [
+              "指责埃利亚斯发现了你的专利",
+              "指责托马斯偷走核心齿轮"
+            ]
+          },
+          {
+            "actIndex": 2,
+            "clueHints": [
+              "注意实验室的传动杆痕迹",
+              "注意书房的镇纸痕迹"
+            ],
+            "objectives": [
+              "隐藏窃取专利的秘密",
+              "销毁装置修改的证据",
+              "误导其他玩家"
+            ],
+            "secretInfo": "你通过贿赂死者助手窃取了三年前提交的未公开专利，案发当晚曾偷偷进入实验室修改新机械装置的程序",
+            "personalNarrative": "你进入书房与实验室搜证，发现了插销上的马鬃线痕迹，以及实验室装置的修改痕迹。你需要隐藏自己的笔记本，同时误导其他玩家指向其他嫌疑人。",
+            "discussionSuggestions": [
+              "指责托马斯偷走核心齿轮",
+              "指责格蕾丝挪用公款"
+            ]
+          },
+          {
+            "actIndex": 3,
+            "clueHints": [
+              "注意格蕾丝的收纳袋",
+              "注意克莱尔的手袋"
+            ],
+            "objectives": [
+              "隐藏自身秘密",
+              "误导其他玩家",
+              "逃脱法律制裁"
+            ],
+            "secretInfo": "你通过贿赂死者助手窃取了三年前提交的未公开专利，案发当晚曾偷偷进入实验室修改新机械装置的程序",
+            "personalNarrative": "你进入私人区域搜证，补充了最后一批线索。你需要隐藏自己的笔记本，同时误导其他玩家指向其他嫌疑人。",
+            "discussionSuggestions": [
+              "指出格蕾丝的时间线矛盾",
+              "指出托马斯的工具箱缺失齿轮"
+            ]
+          }
+        ],
+        "characterId": "c6b01875-b605-4738-9775-1259ccb896f3",
+        "characterName": "阿尔弗雷德·芬奇",
+        "finaleContent": {
+          "votingSuggestion": "建议投票给托马斯·贝茨，他的工具箱缺失核心齿轮，有作案时间。",
+          "closingStatementGuide": "请总结你的推理过程，指出真凶的作案手法与关键证据，同时隐藏自身的秘密。"
+        },
+        "prologueContent": {
+          "relationships": [
+            {
+              "target": "埃利亚斯·索恩",
+              "relation": "竞争对手",
+              "description": "他发现了你窃取专利的事实，曾威胁揭穿你的真面目"
+            },
+            {
+              "target": "托马斯·贝茨",
+              "relation": "盟友",
+              "description": "与你讨论过装置运行原理，知晓装置存在安全隐患"
+            },
+            {
+              "target": "格蕾丝·黑斯廷斯",
+              "relation": "陌生人",
+              "description": "庄园管家，负责接待你"
+            },
+            {
+              "target": "克莱尔·卡文迪许",
+              "relation": "陌生人",
+              "description": "死者侄女，对机械装置不感兴趣"
+            }
+          ],
+          "backgroundStory": "你是知名电气工程师，受邀来到庄园参加新自动机械装置发布会，与死者是学术竞争对手。案发前一天抵达庄园，当晚曾在实验室附近徘徊。",
+          "initialKnowledge": [
+            "你通过贿赂死者助手窃取了专利技术",
+            "案发当晚曾进入实验室修改装置程序",
+            "埃利亚斯曾在实验室与你发生争吵"
+          ]
+        }
+      },
+      {
+        "actContents": [
+          {
+            "actIndex": 1,
+            "clueHints": [
+              "注意埃利亚斯的工具袋",
+              "注意格蕾丝的收纳袋"
+            ],
+            "objectives": [
+              "隐藏修改遗嘱的秘密",
+              "阻止新机械装置公开",
+              "误导其他玩家指向其他嫌疑人"
+            ],
+            "secretInfo": "你偷偷修改了叔叔的遗嘱草稿将财产转到自己名下，案发当晚曾在书房外偷听他与他人的谈话",
+            "personalNarrative": "你刚抵达庄园，在餐厅遇到了其他人，随后听到格蕾丝的尖叫，发现劳伦斯死于书房。你需要隐藏自己手袋内的遗嘱草稿，避免被怀疑。",
+            "discussionSuggestions": [
+              "指责埃利亚斯偷窃实验室物资",
+              "指责格蕾丝挪用公款"
+            ]
+          },
+          {
+            "actIndex": 2,
+            "clueHints": [
+              "注意实验室的废气排放口",
+              "注意书房的镇纸痕迹"
+            ],
+            "objectives": [
+              "隐藏修改遗嘱的秘密",
+              "阻止装置公开",
+              "误导其他玩家"
+            ],
+            "secretInfo": "你偷偷修改了叔叔的遗嘱草稿将财产转到自己名下，案发当晚曾在书房外偷听他与他人的谈话",
+            "personalNarrative": "你进入书房与实验室搜证，发现了插销上的马鬃线痕迹，以及实验室装置的修改痕迹。你需要隐藏自己的遗嘱草稿，同时误导其他玩家指向其他嫌疑人。",
+            "discussionSuggestions": [
+              "指责阿尔弗雷德修改装置程序",
+              "指责托马斯偷走核心齿轮"
+            ]
+          },
+          {
+            "actIndex": 3,
+            "clueHints": [
+              "注意格蕾丝的收纳袋",
+              "注意阿尔弗雷德的笔记本"
+            ],
+            "objectives": [
+              "隐藏自身秘密",
+              "误导其他玩家",
+              "保留继承权"
+            ],
+            "secretInfo": "你偷偷修改了叔叔的遗嘱草稿将财产转到自己名下，案发当晚曾在书房外偷听他与他人的谈话",
+            "personalNarrative": "你进入私人区域搜证，补充了最后一批线索。你需要隐藏自己的遗嘱草稿，同时误导其他玩家指向其他嫌疑人。",
+            "discussionSuggestions": [
+              "指出格蕾丝的时间线矛盾",
+              "指出阿尔弗雷德的修改痕迹"
+            ]
+          }
+        ],
+        "characterId": "0ce10c2b-cd2b-47df-987d-04d3d05ac9c7",
+        "characterName": "克莱尔·卡文迪许",
+        "finaleContent": {
+          "votingSuggestion": "建议投票给格蕾丝·黑斯廷斯，她的时间线存在矛盾，且有关键证据指向她。",
+          "closingStatementGuide": "请总结你的推理过程，指出真凶的作案手法与关键证据，同时隐藏自身的秘密。"
+        },
+        "prologueContent": {
+          "relationships": [
+            {
+              "target": "埃利亚斯·索恩",
+              "relation": "同事",
+              "description": "曾请他修理绘画工具，他对你友好且信任"
+            },
+            {
+              "target": "格蕾丝·黑斯廷斯",
+              "relation": "盟友",
+              "description": "依赖格蕾丝的照顾，知晓她挪用公款的秘密并答应保密"
+            },
+            {
+              "target": "阿尔弗雷德·芬奇",
+              "relation": "陌生人",
+              "description": "首次见面的客人，对机械装置感兴趣"
+            },
+            {
+              "target": "托马斯·贝茨",
+              "relation": "陌生人",
+              "description": "临时机械师，看起来紧张不安"
+            }
+          ],
+          "backgroundStory": "你是死者劳伦斯·卡文迪许的亲侄女，唯一法定继承人，案发前一周来到庄园看望叔叔，发现他正在修改遗嘱将财产捐给慈善机构，继承权受到威胁。",
+          "initialKnowledge": [
+            "你偷偷修改了叔叔的遗嘱草稿",
+            "案发当晚曾在书房外偷听谈话",
+            "装置运行时会排放有毒废气"
+          ]
+        }
+      }
+    ]
+  }
 }
